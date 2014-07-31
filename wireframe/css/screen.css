@@ -1,0 +1,151 @@
+/* html
+----------------------------------------------------------------------------------------*/
+* {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	border: none;
+	outline: none;
+}
+
+html { 
+	overflow-y: scroll; 
+	-webkit-text-size-adjust: 100%; /* 2 */
+	-ms-text-size-adjust: 100%; /* 2 */	
+}
+
+body {
+	margin: 50px;
+	font: normal 12px arial, serif;
+	line-height: 1;
+  color: #333;
+}
+
+img {
+	line-height: 0;
+}
+
+article, aside, footer, header, hgroup, nav, section {
+  display: block;
+}
+
+/* clearfix
+----------------------------------------------------------------------------------------*/
+.clearfix:before, .clearfix:after {
+	content: "\0020"; 
+	display: block; 
+	height: 0; 
+	visibility: hidden; 
+}
+
+.clearfix:after { 
+	clear: both; 
+}
+
+.clearfix { 
+	zoom: 1; 
+}
+
+/* classes
+----------------------------------------------------------------------------------------*/
+.hide {
+	display: none;
+	visibility: hidden;
+}
+
+/* grid
+----------------------------------------------------------------------------------------*/
+.fluid-grid {
+  *zoom: 1;
+	margin: 0 0 0 -15px;
+	padding: 5px 0;
+	background: #eee;
+}
+.fluid-grid .fluid-grid {
+	padding: 0;
+}
+.fluid-grid:before,
+.fluid-grid:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.fluid-grid:after {
+  clear: both;
+}
+
+.grid {
+	display: block;
+	width: 100%;
+	min-height: 10px;
+	float: left;
+	background: gold;
+}
+
+.grid-inner {
+	background: red;
+	margin: 0 0 0 15px;
+}
+
+.grid-25 {
+  width: 25%;
+  *width: 24.791666666666668%;
+}
+
+.grid-50 {
+  width: 50%;
+  *width: 49.791666666666664%;
+}
+
+.grid-75 {
+  width: 75%;
+  *width: 74.79166666666667%;
+}
+
+.grid-100 {
+  width: 100%;
+  *width: 99.79166666666667%;
+}
+
+.grid-border {
+	margin: 0 0 0 -15px;
+}
+
+.grid-border .grid-inner {
+	padding: 0 0 0 7px;
+	margin: 0 0 0 7px;
+	border-left: 1px solid green;
+}
+
+.grid-border .grid:first-child .grid-inner {
+	border-color: transparent;
+}
+
+.grid-border span {
+	display: block;
+	background: orange;
+}
+
+/* container
+----------------------------------------------------------------------------------------*/
+.container {
+	margin: 0 0 10px 0;
+	background: #f9f9f9;
+}
+
+.container .container {
+	background: #f1f1f1;
+}
+
+.container .container:last-child {
+	margin: 0;
+}
+
+/* layout
+----------------------------------------------------------------------------------------*/
+#page {
+	width: 100%;
+	max-width: 1020px;
+	padding: 5px 0;
+	background: blue;
+}

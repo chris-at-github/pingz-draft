@@ -1,0 +1,17 @@
+<div>
+	[{assign var="sCountrySelected" value=""}]
+
+	[{if isset($invadr.oxuser__oxcountryid)}]
+		[{assign var="sCountrySelected" value=$invadr.oxuser__oxcountryid}]
+
+	[{elseif $oxcmp_user->oxuser__oxcountryid->value}]
+		[{assign var="sCountrySelected" value=$oxcmp_user->oxuser__oxcountryid->value}]
+
+	[{elseif ($oViewConf->getCountryList()|@count) == 1}]
+		[{foreach from=$oViewConf->getCountryList() item=country}]
+			[{assign var="sCountrySelected" value=$country->oxcountry__oxid->value}]
+		[{/foreach }]
+	[{/if}]
+
+	 Country: > [{$sCountrySelected}] <
+</div>

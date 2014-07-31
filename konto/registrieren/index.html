@@ -1,0 +1,202 @@
+<?php
+
+	$_T_CONFIG_LOCAL = array(
+	);
+	
+	$_T_WIDGET_LOCAL = array(
+		'sidebar' => '/widget/account-navigation.html'
+	);
+
+?>
+<?php include($_SERVER['DOCUMENT_ROOT'] . '/tinytools/header.php'); ?>
+
+<form action="http://localhost:8002/index.php?" method="post">
+	<div>
+		<input type="hidden" name="stoken" value="EBA6A91C">
+		<input type="hidden" name="lang" value="0">
+		<input type="hidden" name="actcontrol" value="register">
+
+		<input type="hidden" name="fnc" value="registeruser">
+		<input type="hidden" name="cl" value="register">
+		<input type="hidden" name="lgn_cook" value="0">
+		<input type="hidden" id="reloadAddress" name="reloadaddress" value="">
+		<input type="hidden" name="option" value="3">
+	</div>
+	<h2>Kontoinformationen</h2>
+	<div class="form-grid">
+
+		<div class="form-item">
+			<div class="form-label"><label for="user-account-username">E-Mail-Adresse: <span class="form-required">*</span></label></div>
+			<div class="form-field">
+				<input id="userLoginName" type="text" name="lgn_usr" value="" data-required="true" data-type="email" class="parsley-validated">
+			</div>
+		</div>
+
+
+
+		<div class="form-item">
+			<div class="form-label"><label for="user-account-password">Passwort::</label></div>
+			<div class="form-field">
+				<input type="password" id="user-account-password" name="lgn_pwd" value="" data-required="true" data-minlength="6" data-minlength-message="Bitte ein längeres Passwort eingeben" data-equalto="#user-account-password-confirm" data-equalto-message="Passwörter stimmen nicht überein!" class="parsley-validated">
+			</div>
+		</div>
+
+
+
+		<div class="form-item">
+			<div class="form-label"><label for="user-account-password-confirm">Passwort::</label></div>
+			<div class="form-field">
+				<input type="password" id="user-account-password-confirm" name="lgn_pwd2" value="" data-required="true" data-minlength="6" data-minlength-message="Bitte ein längeres Passwort eingeben" class="parsley-validated">
+			</div>
+		</div>
+
+
+
+		<div class="form-item form-checkbox form-checkbox-inline clearfix">
+			<div class="clearfix">
+				<div class="form-field"><input id="user-account-newsletter" type="checkbox" name="blnewssubscribed" value="1"></div>
+				<div class="form-label"><label for="user-account-newsletter">Newsletter abonnieren</label></div>
+			</div>		
+			<p class="text-small text-grey">Sie können den Newsletter jederzeit kostenlos abbestellen.
+			</p></div>
+		<div><input type="hidden" name="blnewssubscribed" value="0"></div>				    </div>
+	<h2>Rechnungsadresse</h2>
+	<div class="form-grid">
+
+
+
+
+		<div class="form-item">
+			<div class="form-label"><label for="user-billingaddress-oxsal">Anrede:</label></div>
+			<div class="form-field">
+				<select name="invadr[oxuser__oxsal]" id="user-billingaddress-oxsal">
+					<option value="MR">Herr</option>
+					<option value="MRS">Frau</option>
+				</select>	</div>
+		</div>
+
+		<div class="form-item">
+			<div class="form-label">
+				<label for="user-billingaddress-oxfname">
+					Vorname:
+					<span class="form-required">*</span>		</label>
+			</div>
+			<div class="form-field">
+				<input type="text" id="user-billingaddress-oxfname" name="invadr[oxuser__oxfname]" value="" data-required="true" class="parsley-validated">
+			</div>
+		</div>
+
+		<div class="form-item">
+			<div class="form-label">
+				<label for="user-billingaddress-oxlname">
+					Nachname:
+					<span class="form-required">*</span>		</label>
+			</div>
+			<div class="form-field">
+				<input type="text" id="user-billingaddress-oxlname" name="invadr[oxuser__oxlname]" value="" data-required="true" class="parsley-validated">
+			</div>
+		</div>
+
+		<div class="fluid-grid">
+			<div class="grid grid-66">
+				<div class="form-item grid-inner">
+					<div class="form-label">
+						<label for="user-billingaddress-oxstreet">
+							Straße: 					<span class="form-required">*</span>				
+						</label>
+					</div>
+					<div class="form-field">
+						<input type="text" id="user-billingaddress-oxstreet" name="invadr[oxuser__oxstreet]" value="" data-required="true" class="parsley-validated">			
+					</div>
+				</div>	
+			</div>
+
+			<div class="grid grid-33">
+				<div class="form-item grid-inner">
+					<div class="form-label">
+						<label for="user-billingaddress-oxstreetnr">
+							Hausnummer:					<span class="form-required">*</span>	
+						</label>
+					</div>
+					<div class="form-field">
+						<input type="text" id="user-billingaddress-oxstreetnr" name="invadr[oxuser__oxstreetnr]" value="" data-required="true" class="parsley-validated">
+					</div>
+				</div>		
+			</div>
+		</div>	
+
+		<div class="fluid-grid">
+			<div class="grid grid-33">
+				<div class="form-item grid-inner">
+					<div class="form-label">
+						<label for="user-billingaddress-oxzip">
+							Postleitzahl:					<span class="form-required">*</span>	
+						</label>
+					</div>
+					<div class="form-field">
+						<input type="text" id="user-billingaddress-oxzip" name="invadr[oxuser__oxzip]" value="" data-required="true" class="parsley-validated">
+					</div>
+				</div>		
+			</div>
+
+			<div class="grid grid-66">
+				<div class="form-item grid-inner">
+					<div class="form-label">
+						<label for="user-billingaddress-oxcity">
+							Stadt: 					<span class="form-required">*</span>				
+						</label>
+					</div>
+					<div class="form-field">
+						<input type="text" id="user-billingaddress-oxcity" name="invadr[oxuser__oxcity]" value="" data-required="true" class="parsley-validated">			
+					</div>
+				</div>	
+			</div>
+		</div>		
+
+		<div class="form-item">
+			<div class="form-label">
+
+				<label for="user-billingaddress-oxaddinfo">
+					zus. Info:
+				</label>
+			</div>
+			<div class="form-field">
+				<input type="text" id="user-billingaddress-oxaddinfo" name="invadr[oxuser__oxaddinfo]" value="">
+			</div>
+		</div>				
+
+
+
+
+
+
+
+		<div><input type="hidden" name="invadr[oxuser__oxcountryid]" value="a7c40f631fc920687.20179984"></div>
+
+
+
+
+		<div class="form-item">
+			<div class="form-label">
+				<label for="user-billingaddress-oxfon">
+					Telefon:
+				</label>
+			</div>
+			<div class="form-field">
+				<input type="text" id="user-billingaddress-oxfon" name="invadr[oxuser__oxfon]" value="">
+			</div>
+		</div>		
+
+
+
+
+
+		<p class="text-small">Bitte alle mit <span class="form-required">*</span> markierten Felder ausfüllen.</p>
+
+		<div class="form-actions">
+			<button id="accUserSaveTop" type="submit" name="save" class="button button-submit">Speichern</button>
+		</div>
+	</div>
+</form>
+
+<?php include($_SERVER['DOCUMENT_ROOT'] . '/tinytools/footer.php'); ?>

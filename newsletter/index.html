@@ -1,0 +1,53 @@
+<?php include($_SERVER['DOCUMENT_ROOT'] . '/tinytools/header.php'); ?>
+
+	<p>Bitte alle mit <span class="form-required">*</span> gekennzeichneten Felder ausfüllen.</p>
+
+	<form action="http://localhost:8002/index.php?" method="post">
+		
+		<div>
+			<input type="hidden" name="stoken" value="F1196E2B">
+	<input type="hidden" name="lang" value="0">
+			<input type="hidden" name="fnc" value="send">
+			<input type="hidden" name="cl" value="newsletter">
+			<input type="hidden" name="editval[oxuser__oxcountryid]" value="a7c40f631fc920687.20179984">
+		</div>
+		<div class="form-item">
+			<div class="form-label"><label for="newsletter-title">Anrede</label></div>
+			<div class="form-field"><select name="editval[oxuser__oxsal]">
+			<option value="MR" selected="">Herr</option>
+			<option value="MRS">Frau</option>
+	</select></div>
+		</div>
+
+		<div class="form-item">
+			<div class="form-label"><label for="newsletter-fname">Vorname:</label></div>
+			<div class="form-field"><input id="newsletter-fname" type="text" name="editval[oxuser__oxfname]" value=""></div>
+		</div>	
+
+		<div class="form-item">
+			<div class="form-label"><label for="newsletter-lname">Nachname:</label></div>
+			<div class="form-field"><input id="newsletter-lname" type="text" name="editval[oxuser__oxlname]" value=""></div>
+		</div>	
+
+		<div class="form-item">
+			<div class="form-label"><label for="newsletter-username">E-Mail:</label> <span class="form-required">*</span></div>
+			<div class="form-field"><input id="newsletter-username" type="text" name="editval[oxuser__oxusername]" value="" data-required="true" data-type="email"></div>
+		</div>
+
+		<div class="form-item form-radio form-radio-inline clearfix">
+			<div class="form-item clearfix">
+				<div class="form-field"><input id="newsletter-subscribe" type="radio" name="subscribeStatus" value="1" checked="checked"></div>
+				<div class="form-label"><label for="newsletter-subscribe">Abonnieren</label></div>
+			</div>
+
+			<div class="form-item clearfix">
+				<div class="form-field"><input id="newsletter-unsubscribe" type="radio" name="subscribeStatus" value="0"></div>
+				<div class="form-label"><label for="newsletter-unsubscribe">Stornieren</label></div>
+			</div>			
+		</div>
+
+		<div class="form-actions">
+			<button id="newsLetterSubmit" class="button button-submit" type="submit">Absenden</button>	
+		</div>
+	</form>
+<?php include($_SERVER['DOCUMENT_ROOT'] . '/tinytools/footer.php'); ?>

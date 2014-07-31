@@ -1,0 +1,24 @@
+<?php
+
+	$_T_HEADER				= 'Seite nicht gefunden';
+	$_T_CONFIG_LOCAL 	= array(
+		'widescreen'	=> true,
+		'section'			=> array(
+			'breadcrumb'	=> false
+		)
+	);
+
+?>
+<?php include($_SERVER['DOCUMENT_ROOT'] . '/tinytools/header.php'); ?>
+
+	<div class="clearfix">
+		<div class="text-image text-image-right"><img src="/images/404.png" alt="" /></div>
+		<p>
+			Die angeforderte Seite konnte leider nicht gefunden werden.
+		</p>
+		<p>
+			Du hast nun die Möglichkeit mit unserer Vorlage ein eigenes Wärmekissen zu schneidern oder du suchst einfach in unserer <a href="/waermekissen/">Auswahl von Wärmekissen</a>, das passende für dich raus.
+		</p>
+	</div>
+		
+<?php include($_SERVER['DOCUMENT_ROOT'] . '/tinytools/footer.php'); ?>

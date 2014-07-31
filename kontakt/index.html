@@ -1,0 +1,62 @@
+<?php
+
+	$_T_CONFIG_LOCAL = array(
+	);
+	
+	$_T_WIDGET_LOCAL = array(
+	);
+
+?>
+<?php include($_SERVER['DOCUMENT_ROOT'] . '/tinytools/header.php'); ?>
+	
+	<div class="fluid-grid">
+		<div class="grid grid-66">
+			<div class="grid-inner">
+				<p>
+					Haben Sie Fragen zu einem Produkt von uns oder ist eine gewünschte Kombination nicht vorhanden? Schreiben Sie uns, wir helfen Ihnen gerne weiter.
+				</p>
+			
+				<form action="<?php $_SERVER['PHP_SELF']; ?>" method="get">
+					<div class="form-item">
+						<div class="form-label"><label for="text-fname">Name <span class="form-required">*</span></label></div>
+						<div class="form-field"><input type="text" id="text-fname" name="editval[oxuser__oxfname]" /></div>
+					</div>
+					
+					<div class="form-item">
+						<div class="form-label"><label for="text-email">E-Mailadresse <span class="form-required">*</span></label></div>
+						<div class="form-field"><input type="text" id="text-email" name="editval[oxuser__oxemail]" /></div>
+					</div>				
+					
+					<div class="form-item">
+						<div class="form-label"><label for="text-message">Nachricht <span class="form-required">*</span></label></div>
+						<div class="form-field"><textarea rows="5" cols="40" id="text-message" name="editval[oxuser__oxmessage]"></textarea></div>
+					</div>					
+					
+					<div class="form-actions">
+						<button type="submit" class="button-submit">Absenden</button>
+					</div>
+				</form>
+			</div>
+		</div>
+		<div class="grid grid-33">
+			<div class="grid-inner">
+				<h2>Direktkontakt</h2>
+				<dl>
+					<dt>Adresse:</dt>
+					<dd>Parkhofweg 8</dd>
+					
+					<dt>Plz, Stadt:</dt>
+					<dd>82377 Penzberg</dd>
+				</dl>
+				<dl>
+					<dt>Telefon:</dt>
+					<dd>08856 / 2860</dd>
+					
+					<dt>E-Mail:</dt>
+					<dd><a href="mailto:info@pingz.de">info@pingz.de</a></dd>
+				</dl>
+			</div>
+		</div>
+	</div>
+
+<?php include($_SERVER['DOCUMENT_ROOT'] . '/tinytools/footer.php'); ?>

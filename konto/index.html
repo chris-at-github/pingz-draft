@@ -1,0 +1,102 @@
+<?php
+
+	$_T_CONFIG_LOCAL = array(
+	);
+	
+	$_T_WIDGET_LOCAL = array(
+		'sidebar' => '/widget/account-navigation.html'
+	);
+
+?>
+<?php include($_SERVER['DOCUMENT_ROOT'] . '/tinytools/header.php'); ?>
+	
+<?php if(true === false) { ?>
+
+	<form action="/konto/" method="post">
+		<div class="form-item">
+			<div class="form-label"><label for="user-login-username">E-Mailadresse:</label></div>
+			<div class="form-field"><input type="text" id="user-login-username" value="" data-required="true" data-type="email" /></div>
+		</div>
+		
+		<div class="form-item">
+			<div class="form-label"><label for="user-login-password">Passwort:</label></div>
+			<div class="form-field"><input type="password" id="user-login-password" value="" /></div>
+		</div>		
+		
+		<div class="form-actions">
+			<input type="submit" value="Anmelden" class="button button-submit" /> 
+		</div>
+	</form>
+	
+	<div class="fluid-grid border-grid border-grid-grey equalheight-grid">
+		<div class="grid grid-50">
+			<div class="grid-inner">
+				<header class="h3"><a href="/konto/registieren/">Registrieren</a></header>
+				<p>
+					Eröffnen Sie schnell und einfach Ihr persönliches Kundenkonto. Mit Ihrem persönlichen Kundenkonto haben Sie die ... und die ... Vorteile.
+				</p>
+				<ul class="ul-default">
+					<li><a href="/konto/registieren/">Registrieren</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="grid grid-50">
+			<div class="grid-inner">
+				<header class="h3"><a href="/konto/passwort-vergessen/">Passwort vergessen?</a></header>
+				<p>
+					Geben Sie in dem Formular auf der nachfolgenden Seite Ihre E-Mailadresse, mit der Sie sich registiert haben an und Ihnen wird ein neues Passwort zugeschickt.				
+				</p>
+				<ul class="ul-default">
+					<li><a href="/konto/passwort-vergessen/">Passwort zurücksetzen?</a></li>
+				</ul>				
+			</div>
+		</div>
+	</div>
+
+<?php } else { ?>
+
+<div class="fluid-grid">
+		<div class="grid grid-50">
+			<div class="grid-inner">
+			
+				<ul class="ul-default ul-gap">
+					<li>
+						<strong class="h3"><a class="h3" id="linkAccountPassword" href="http://localhost:8002/mein-passwort/" rel="nofollow">Passwort ändern</a></strong>
+					</li>
+					<li>
+						<strong class="h3"><a id="linkAccountBillship" href="http://localhost:8002/meine-adressen/" rel="nofollow">Rechnungs- und Liefereinstellungen</a></strong>
+						<br>
+						<span class="text-grey">Rechnungs- und Lieferadressen bearbeiten</span>
+					</li>
+					<li>
+						<strong class="h3"><a id="linkAccountNewsletter" href="http://localhost:8002/index.php?cl=account_newsletter" rel="nofollow">Newslettereinstellungen</a></strong>
+						<br>
+						<span class="text-grey">Newsletter abonnieren / stornieren</span>
+					</li>
+				</ul>
+			
+			</div>
+		</div>
+
+		<div class="grid grid-50">
+			<div class="grid-inner">
+				
+					<ul class="ul-default ul-gap">
+						<li>
+							<strong class="h3"><a id="linkAccountOrder" href="http://localhost:8002/bestellhistorie/" rel="nofollow">Bestellhistorie</a></strong>
+						</li>
+						<li>
+							<strong class="h3"><a class="h3" href="http://localhost:8002/mein-merkzettel/" rel="nofollow">Mein Merkzettel</a></strong>
+							<br>
+							<span class="text-grey">Artikel: 0</span>
+						</li>
+					</ul>		
+													
+			</div>
+		</div>
+	</div>
+
+<?php } ?>
+
+
+<?php include($_SERVER['DOCUMENT_ROOT'] . '/tinytools/footer.php'); ?>

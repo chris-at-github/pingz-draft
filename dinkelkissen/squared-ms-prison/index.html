@@ -1,0 +1,94 @@
+<?php
+
+	$_T_CONFIG_LOCAL = array(
+		'script'	=> array(
+			'/script/zoomsl-3.0.min.js'
+		),
+		'css'			=> array(),
+	);
+	
+	$_T_WIDGET_LOCAL = array(
+		'sidebar'	=> array(
+			'/widget/container-share.html'
+		)				
+	);
+
+?>
+<?php include($_SERVER['DOCUMENT_ROOT'] . '/tinytools/header.php'); ?>
+
+	<div id="article-properties">
+		<div class="fluid-grid equalheight-grid">
+			<div class="grid grid-55">
+				<div id="article-properties-image" class="grid-inner">	
+					<img src="/images/articles/1/380_380_75/squared_ms_prison_intro.jpg" data-large="/images/articles/1/665_665_75/squared_ms_prison_intro.jpg" alt="Squared Ms. Prison">						
+				</div>
+			</div>
+			<div class="grid grid-45 magnifier-preview" id="preview">
+				<div id="article-properties-data" class="grid-inner">
+					<dl class="dl-block">
+						<dt>Abmessungen:</dt>
+						<dd>20 x 20 cm</dd>
+						<dt>Gewicht:</dt>
+						<dd>ca. 240 g</dd>
+						<dt>Material:</dt>
+						<dd>100% Baumwolle</dd>
+						<dt>Füllung:</dt>
+						<dd>100% Dinkelkorn (Auslesequalität)</dd>
+						<dt>Kammern:</dt>
+						<dd>4</dd>
+					</dl>
+					
+					<div id="article-properties-tobasket">
+						<div id="article-properties-price">37,50 € <span class="article-price-notify">*</span></div>
+						<div id="article-properties-tobasket-form" class="form-inline clearfix">
+							<form action="/warenkorb/" method="post">
+								<div class="form-item">
+									<div class="form-label">Anzahl:</div>
+									<div class="form-item"><input type="text" id="article-properties-tobasket-number" value="1" /></div>
+								</div>
+								<div class="form-actions">
+									<button type="submit" class="button button-submit button-large">In den Warenkorb</button>
+								</div>
+							</form>
+						</div>
+						<div id="article-properties-delivery-time-ok" class="article-properties-delivery-time">Lieferzeit 3 - 5 Tage</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="fluid-grid equalheight-grid">
+			<div class="grid grid-55">
+				<div id="article-properties-image-selection" class="grid-inner">
+					<ul class="fluid-grid fixed-grid">
+							<li class="grid grid-25 active" data-image-url="/images/articles/1/380_380_75/squared_ms_prison_intro.jpg" data-large-url="/images/articles/1/665_665_75/squared_ms_prison_intro.jpg">
+								<img src="/images/articles/1/85_85_75/squared_ms_prison_intro.jpg" alt="" >
+							</li>
+							<li class="grid grid-25" data-image-url="/images/articles/2/380_380_75/squared_ms_prison_front.jpg" data-large-url="/images/articles/2/665_665_75/squared_ms_prison_front.jpg">
+								<img src="/images/articles/2/85_85_75/squared_ms_prison_front.jpg" alt="">
+							</li>
+							<li class="grid grid-25" data-image-url="/images/articles/3/380_380_75/squared_ms_prison_back.jpg" data-large-url="/images/articles/3/665_665_75/squared_ms_prison_back.jpg">
+								<img src="/images/articles/3/85_85_75/squared_ms_prison_back.jpg" alt="">
+							</li>
+					</ul>
+				</div>
+			</div>
+			<div class="grid grid-45">
+				<div class="grid-inner">
+					<?php echo $widget->render('article-price-notify'); ?>
+				</div>
+			</div>
+		</div>
+	</div>
+		
+	<h2>Squared Dinkelkissen</h2>
+	<p>
+		<strong>Auch die bösen Mädels wollen's warm. Die Sträflingsstreifen mit Pink. Der absolute Eyecatcher in seiner Gewichtsklasse.</strong>
+	</p>
+	<p>
+		Unsere Squared Kissen eigenen sich besonders gut zur punktuellen Behandlung mit Wärme oder mit Kälte. Durch die handliche Größe bringen Sie die Wärme exakt an die richtigen Stellen und sorgen für wohltuende Wärme oder kühlende Frische.
+		<br />
+		Speziell für Kinder ist diese Größe bestens geeignet.
+	</p>
+
+<?php include($_SERVER['DOCUMENT_ROOT'] . '/tinytools/footer.php'); ?>

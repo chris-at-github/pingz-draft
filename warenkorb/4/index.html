@@ -1,0 +1,115 @@
+<?php
+
+	$_T_CONFIG_LOCAL = array(
+		'script'			=> array(),
+		'css'					=> array(),
+		'widescreen'	=> true
+	);
+	
+	$_T_WIDGET_LOCAL = array(
+		'steps'			=> '/widget/checkout-steps.html',
+		'articles'	=> '/widget/checkout-articles.html'
+	);
+
+?>
+<?php include($_SERVER['DOCUMENT_ROOT'] . '/tinytools/header.php'); ?>
+
+	<?php echo $widget->render('steps'); ?>
+	
+	<ul id="checkout-summary">
+		<li>
+			<form action="/warenkorb/2/" method="post">
+				<header class="h2">
+					<span>Artikel</span>
+					
+					<input type="hidden" name="cl" value="basket">
+					<input type="hidden" name="fnc" value="">
+					<button type="submit" class="button-icon button-icon-pencil" title="Ändern"></button>
+					
+				</header>			
+			</form>
+			
+			<?php echo $widget->render('articles', array('editable' => false)); ?>
+		</li>
+		<li>
+			<header class="h2">Adressen</header>
+			<div class="fluid-grid">
+				<div class="grid grid-50">
+					<div class="grid-inner">
+						<header class="h3">Rechnungsadresse</header>
+						<dl>
+							<dt class="hide">Name:</dt>
+							<dd class="dd-margined">Herr Christian Pschorr</dd>
+							
+							<dt class="hide">Adresse:</dt>
+							<dd class="dd-margined">
+								Parkhofweg 8<br>
+								82377 Penzberg<br>
+								Deutschland							
+							</dd>
+													
+							<dt>E-Mail:</dt>
+							<dd><a href="mailto:pschorr.christian@gmail.com">pschorr.christian@gmail.com</a></dd>
+
+							<dt>Telefonnummer für Rückfragen:</dt>
+							<dd>08856 / 123 456 - 789</dd>
+						</dl>
+					</div>
+				</div>
+				<div class="grid grid-50">
+					<div class="grid-inner">
+						<header class="h3">Lieferadresse</header>
+						<dl>
+							<dt class="hide">Name:</dt>
+							<dd class="dd-margined">Herr Christian Pschorr</dd>
+							
+							<dt class="hide">Adresse:</dt>
+							<dd class="dd-margined">
+								datamints GmbH<br>
+								Im Thal 2<br>
+								82377 Penzberg<br>
+								Deutschland							
+							</dd>
+						</dl>
+					</div>
+				</div>				
+			</div>
+		</li>
+		<li>
+			<header class="h2">Versand &amp; Zahlungsart</header>
+			<div class="fluid-grid">
+				<div class="grid grid-50">
+					<div class="grid-inner">
+						<header class="h3">Lieferung</header>
+						<p>Ihre Wunschartikel werden schnell und zuverlässig mit der Hermes-Logistik-Gruppe geliefert. Die Versandkosten betragen 5,95 € pro Bestellung.</p>
+					</div>
+				</div>
+				<div class="grid grid-50">
+					<div class="grid-inner">
+						<header class="h3">Zahlungsart</header>
+						<p>Rechnung</p>
+					</div>
+				</div>				
+			</div>
+		</li>
+		<li>
+			<header class="h2">AGB und Widerrufsrecht</header>
+			<div class="form-item form-checkbox clearfix">
+				<div class="form-field"><input type="checkbox" id="checkout-summary-confirm-agb" value="1" /></div>
+				<div class="form-label">
+					<label for="checkout-summary-confirm-agb">
+						Ich habe die <a href="/rechtliche-hinweise/allgemeine-geschaeftsbedingungen/">Allgemeine Geschäftsbedingungen</a> gelesen und erkläre mich mit ihnen einverstanden. Ich habe die <a href="/rechtliche-hinweise/widerrufsbelehrung/">Widerrufsbelehrung</a> gelesen.
+					</label>
+				</div>
+			</div>
+		</li>
+	</ul>
+		
+	<form action="/warenkorb/5/" method="post">
+		<div class="form-actions checkout-form-actions clearfix">
+			<input type="submit" value="Zurück" class="button button-prev" />
+			<input type="submit" value="Kostenpflichtig bestellen" class="button button-submit button-next button-large" />
+		</div>
+	</form>
+
+<?php include($_SERVER['DOCUMENT_ROOT'] . '/tinytools/footer.php'); ?>

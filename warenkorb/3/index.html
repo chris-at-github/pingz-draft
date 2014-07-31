@@ -1,0 +1,147 @@
+<?php
+
+	$_T_CONFIG_LOCAL = array(
+		'script'			=> array(),
+		'css'					=> array(),
+		'widescreen'	=> true
+	);
+	
+	$_T_WIDGET_LOCAL = array(
+		'steps'	=> '/widget/checkout-steps.html'
+	);
+
+?>
+<?php include($_SERVER['DOCUMENT_ROOT'] . '/tinytools/header.php'); ?>
+
+	<?php echo $widget->render('steps'); ?>
+	
+	<div id="checkout-payment">
+
+		<div class="checkout-payment-outer">
+			<div class="checkout-payment-inner">
+
+				<header class="h2">Lieferung</header>
+				<form action="/warenkorb/4/" name="shipping" id="shipping" method="post">
+					<div>
+						<input type="hidden" name="stoken" value="8C35179D">
+						<input type="hidden" name="lang" value="0">
+						<input type="hidden" name="ldtype" value="infogrid">
+						<input type="hidden" name="actcontrol" value="payment">
+
+						<input type="hidden" name="cl" value="payment">
+						<input type="hidden" name="fnc" value="changeshipping">
+					</div>
+
+
+
+
+					<div><input type="hidden" name="sShipSet" value="oxidstandard"></div>
+					<p class="h3 text-inline"><strong>Standardversand</strong></p>
+
+					<p>Kosten: 3,90 €</p>
+
+					<p>
+						Ihre Wunschartikel werden schnell und zuverlässig mit der Hermes-Logistik-Gruppe geliefert. Die Versandkosten betragen 5,95 € pro Bestellung.<br>
+						Für vorrätige Artikel erfolgt die Lieferung in der Regel innerhalb von 5 Werktagen.
+					</p>
+
+
+				</form>
+			</div>
+		</div>
+
+
+
+
+		<form action="/warenkorb/4/" class="js-oxValidate payment" id="payment" name="order" method="post">				
+
+
+			<div class="checkout-payment-outer">
+				<div class="checkout-payment-inner">
+					<header class="h2">Zahlungsart</header>
+
+					<div>
+						<input type="hidden" name="stoken" value="8C35179D">
+						<input type="hidden" name="lang" value="0">
+						<input type="hidden" name="ldtype" value="infogrid">
+						<input type="hidden" name="actcontrol" value="payment">
+
+						<input type="hidden" name="cl" value="payment">
+						<input type="hidden" name="fnc" value="validatepayment">
+					</div>
+
+
+					<div class="form-item form-radio clearfix">
+						<div class="form-field">
+							<input id="payment-oxidinvoice" type="radio" name="paymentid" value="oxidinvoice" checked="checked">	
+						</div>
+						<div class="form-label">
+							<label for="payment-oxidinvoice" class="h3">Rechnung</label>
+
+
+
+							<div class="activePayment">
+								<ul>
+								</ul>
+
+
+
+							</div>		
+						</div>
+					</div>																						
+
+					<div class="form-item form-radio clearfix">
+						<div class="form-field">
+							<input id="payment-oxidcashondel" type="radio" name="paymentid" value="oxidcashondel">	
+						</div>
+						<div class="form-label">
+							<label for="payment-oxidcashondel" class="h3">Nachnahme</label>
+
+							<div class="">
+								7,50 €
+								Nachnahmegebühr
+
+
+
+							</div>	
+
+						</div>
+					</div>																						
+
+					<div class="form-item form-radio clearfix">
+						<div class="form-field">
+							<input id="payment-oxidpayadvance" type="radio" name="paymentid" value="oxidpayadvance">	
+						</div>
+						<div class="form-label">
+							<label for="payment-oxidpayadvance" class="h3">Vorauskasse</label>
+
+
+
+							<div class="">
+								<ul>
+								</ul>
+
+
+
+							</div>		
+						</div>
+					</div>																						
+
+
+				</div>
+			</div>
+
+
+
+
+
+
+			<div class="form-actions checkout-form-actions clearfix">
+				<a href="http://localhost:8002/index.php?cl=user" class="button button-prev">Zurück</a>
+				<button type="submit" name="userform" class="button button-submit button-next button-large">Weiter zum nächsten Schritt</button>
+			</div>
+
+		</form>
+	</div>
+
+<?php include($_SERVER['DOCUMENT_ROOT'] . '/tinytools/footer.php'); ?>

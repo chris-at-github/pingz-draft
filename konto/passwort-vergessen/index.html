@@ -1,0 +1,36 @@
+<?php
+
+	$_T_CONFIG_LOCAL = array(
+	);
+
+?>
+<?php include($_SERVER['DOCUMENT_ROOT'] . '/tinytools/header.php'); ?>
+
+	<div class="message message-error">
+		<p>Leider konnten wir Ihnen keine E-Mail zustellen.</p>
+	</div>
+
+	<h2 class="h3">Sie haben Ihr Passwort vergessen?</h2>
+	<p>
+		Kein Problem, hier können Sie ein neues Passwort einrichten.
+	</p>
+	
+	<form action="/konto/" method="post">
+		<div class="form-item">
+			<div class="form-label"><label for="user-password-forget-username">E-Mailadresse:</label></div>
+			<div class="form-field"><input type="text" id="user-password-forget-username" value="" data-required="true" data-type="email" /></div>
+		</div>	
+		
+		<div class="form-actions">
+			<input type="submit" value="Passwort anfordern" class="button button-submit" /> 
+		</div>
+	</form>
+	
+	<p>
+		Nachdem Sie den 'Passwort anfordern'-Knopf angeklickt haben, schicken wir Ihnen eine E-Mail zu, mit der Sie Ihr Passwort ändern können.
+	</p>
+	<p>
+		Sollten Sie innerhalb der nächsten Minuten KEINE E-Mail mit Ihren Zugangsdaten erhalten, so überprüfen Sie bitte: Haben Sie sich in unserem Shop bereits registriert? Wenn nicht, so tun Sie dies bitte einmalig im Rahmen des Bestellprozesses. Sie können dann selbst ein Passwort festlegen. Sobald Sie registriert sind, können Sie sich in Zukunft mit Ihrer E-Mail-Adresse und Ihrem Passwort einloggen.		
+	</p>
+
+<?php include($_SERVER['DOCUMENT_ROOT'] . '/tinytools/footer.php'); ?>

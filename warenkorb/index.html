@@ -1,0 +1,31 @@
+<?php
+
+	$_T_CONFIG_LOCAL = array(
+		'script'			=> array(),
+		'css'					=> array(),
+		'widescreen'	=> true
+	);
+	
+	$_T_WIDGET_LOCAL = array(
+		'steps'			=> '/widget/checkout-steps.html',
+		'articles'	=> '/widget/checkout-articles.html'
+	);
+
+?>
+<?php include($_SERVER['DOCUMENT_ROOT'] . '/tinytools/header.php'); ?>
+
+	<?php echo $widget->render('steps'); ?>
+	
+	<form action="/warenkorb/2/" method="post"> 
+		<?php echo $widget->render('articles', array('editable' => true)); ?>
+		
+		<div id="checkout-articles-price-notify">
+			<?php echo $widget->render('article-price-notify'); ?>
+		</div>
+		
+		<div class="form-actions checkout-form-actions clearfix">
+			<input type="submit" value="Weiter zum nächsten Schritt" class="button button-submit button-next button-large" />
+		</div>
+	</form>
+
+<?php include($_SERVER['DOCUMENT_ROOT'] . '/tinytools/footer.php'); ?>
