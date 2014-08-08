@@ -1,0 +1,57 @@
+/* Variables
+----------------------------------------------------------------------------------------*/
+/* font */
+$arial: 		arial, serif;
+$candara: 	candara, arial, sans-serif;
+
+/* color */
+$white: 				#fff;
+$black: 				#101010;
+
+$lightpink: 		#ffbbd0;
+$pink: 					#e00d4d;
+$darkpink: 			#c90c45;
+
+$green: 				#39cc12;
+$blue: 					#3a87ad;
+
+$yellow: 				#ffba00;
+$darkyellow: 		#fcad00;
+
+// grey-10: #f9f9f9;
+// grey-20: #e7e7e7;
+// grey-30: #bbb;
+// grey-40: #7b7b7b;
+// grey-70: #6d6d6d;
+// grey-80: #494949;
+
+$grey-light: 		#f9f9f9;
+$grey-lighter: 	#e7e7e7;
+$grey: 					#bbb;
+$grey-darker: 	#7b7b7b;
+$grey-dark: 		#494949;
+
+
+/* Alias
+----------------------------------------------------------------------------------------*/
+$h1:	'h1, .h1';
+$h2:	'h2, .h2';
+$h3:	'h3, .h3';
+
+$button:			'button, .button';
+$input-text:	'input[type="text"], input[type="password"]';
+$input-any: 	'input[type="text"], input[type="password"], textarea, select';
+
+
+/* Mixins
+----------------------------------------------------------------------------------------*/
+@mixin font-default($font-size: 12px, $line-height: 1.4) {
+	font: normal $font-size $arial;
+	line-height: $line-height;
+  color: $grey-dark;
+}
+
+@mixin placeholder-default($line-height: 1.4) {
+	line-height: $line-height;
+  color: $grey-darker;
+}
