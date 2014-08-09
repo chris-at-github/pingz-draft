@@ -33,8 +33,8 @@
 		$_T_CONFIG_LOCAL = array();
 	}
 
-	$_T_CONFIG = tArray::arrayMergeRecursive($_T_CONFIG_DEFAULT, $_T_CONFIG_LOCAL);	
-	
+	$_T_CONFIG = tArray::arrayMergeRecursive($_T_CONFIG_DEFAULT, $_T_CONFIG_LOCAL);
+
 /*
 |-----------------------------------------------------------------
 | Menue-Bibliothek
@@ -48,10 +48,10 @@
 		->setConfiguration($_T_CONFIG)
 		->setActive($_SERVER['PHP_SELF'])
 		->setData(array_merge($_T_MENU['header'], $_T_MENU['mainmenu'], $_T_MENU['footerSitemap'], $_T_MENU['footer'], $_T_MENU['basket'], $_T_MENU['user']));
-		
+
 	if(isset($_T_HEADER) === false) {
 		$_T_HEADER = $menu->getActiveTitle();
-	}		
+	}
 
 /*
 |-----------------------------------------------------------------
@@ -67,18 +67,18 @@
 	}
 
 	$_T_WIDGET	= array_merge($_T_WIDGET_DEFAULT, $_T_WIDGET_LOCAL);
-	
+
 	// Widget Factory initialisieren
 	$widget			= tWidget::singleton()
 		->setConfiguration($_T_CONFIG)
 		->setData($_T_WIDGET);
-	
+
 /*
 |-----------------------------------------------------------------
 | CssCrush
 |-----------------------------------------------------------------
-| CSS Crush is an extensible PHP based CSS preprocessor that aims 
-| to alleviate many of the hacks and workarounds necessary in 
+| CSS Crush is an extensible PHP based CSS preprocessor that aims
+| to alleviate many of the hacks and workarounds necessary in
 | modern CSS development.
 |
 */
@@ -111,20 +111,21 @@
 	<meta name="robots" content="index, follow" />
 	<meta name="revisit-after" content="3 days" />
 	<!-- /meta -->
-	
+
 	<!--[if lt ie 9]><script src="/script/html5shiv.js"></script><![endif]-->
-	
+
 	<!-- favicon -->
 	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 	<link rel="icon" href="/favicon.ico" type="image/x-icon">
 
 	<!-- style -->
-	<link rel="stylesheet" type="text/css" href="<?php echo csscrush::file($_SERVER['DOCUMENT_ROOT'] . '/css/screen.css', $_T_CONFIG['csscrush']); ?>" media="screen, projection, print" />
+	<?php /*<link rel="stylesheet" type="text/css" href="<?php echo csscrush::file($_SERVER['DOCUMENT_ROOT'] . '/css/screen.css', $_T_CONFIG['csscrush']); ?>" media="screen, projection, print" />*/ ?>
+	<link rel="stylesheet" type="text/css" href="/css/screen.css" media="screen, projection, print" />
 	<?php if(empty($_T_CONFIG['css']) === false) { ?>
 		<?php foreach($_T_CONFIG['css'] as $css) { ?>
-			<link rel="stylesheet" type="text/css" href="<?php echo csscrush::file($_SERVER['DOCUMENT_ROOT'] . $css, $_T_CONFIG['csscrush']); ?>" media="screen, projection, print" />
+			<link rel="stylesheet" type="text/css" href="<?php echo $css; ?>" media="screen, projection, print" />
 		<?php } ?>
-	<?php } ?>	
+	<?php } ?>
 	<!-- /style -->
 
 </head>
@@ -175,29 +176,29 @@
 						<div class="notice-description text-small">Neuer Artikel im Warenkorb</div>
 						<div class="notice-article">Smart <strong>Stars &amp; Stripes</strong></div>
 					</div>-->
-					
+
 					<a id="basket-trigger" href="/warenkorb">
 						<span id="basket-title">Ihr Warenkorb</span>
 						<span id="basket-status"><span id="basket-status-products">2 Produkte</span><span id="basket-status-price">34,98 €</span></span>
 					</a>
 				</div>
 			</header>
-		<?php } ?>	
+		<?php } ?>
 
 		<div id="body">
-			<?php if($_T_CONFIG['section']['bodyheader'] === true) { ?>			
+			<?php if($_T_CONFIG['section']['bodyheader'] === true) { ?>
 				<header id="body-header">
 					<?php if($_T_CONFIG['section']['breadcrumb'] === true) { ?>
 						<div id="breadcrumb" class="clearfix">
 							<div id="breadcrumb-title">Sie sind hier:</div>
 							<?php echo $menu->renderBreadcrumb(); ?>
-						</div>	
+						</div>
 					<?php } ?>
 					<h1><?php echo $_T_HEADER; ?></h1>
-				</header>			
+				</header>
 			<?php } ?>
-			
-			<?php if($_T_CONFIG['widescreen'] === false) { ?>			
+
+			<?php if($_T_CONFIG['widescreen'] === false) { ?>
 				<div class="clearfix">
 					<div id="body-sidebar" class="sidebar">
 						<?php echo $widget->render('sidebar'); ?><br />
