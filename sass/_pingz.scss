@@ -28,7 +28,7 @@ $darkyellow: 		#fcad00;
 $grey-light: 		#f9f9f9;
 $grey-lighter: 	#e7e7e7;
 $grey: 					#bbb;
-$grey-darker: 	#7b7b7b;
+$grey-darker: 	#6d6d6d;
 $grey-dark: 		#494949;
 
 
@@ -53,5 +53,13 @@ $input-any: 	'input[type="text"], input[type="password"], textarea, select';
 
 @mixin placeholder-default($line-height: 1.4) {
 	line-height: $line-height;
-  color: $grey-darker;
+  color: darken($grey, 10%);
+}
+
+@mixin transform-rotate($deg) {
+	-webkit-transform: rotate($deg);
+	-moz-transform: rotate($deg);
+	-ms-transform: rotate($deg);
+	-o-transform: rotate($deg);
+	transform: rotate($deg);
 }
