@@ -76,66 +76,11 @@
 		}))));
 	};
 
-//	// -------------------------------------------------------------------------------------
-//	// ArticleHover
-//	// @todo eventuell border-width ausrechnen
-//	$.fn.articleHover = function(options) {
-//		var defaults = {
-//			borderWidth: 3,
-//			xxlClass: 'article-xxl'
-//		};
-//		var settings = $.extend({}, defaults, options);
-//
-//		return this.each(function() {
-//			var article = $(this);
-//			var parent	= article.parents('.article-grid');
-//			var hover		= article.find('.article-hover');
-//
-//			if(article.hasClass('article-default') === true) {
-//				return;
-//			}
-//
-//			article.bind('mouseover', function() {
-//				if(hover.length === 0) {
-//					hover = $('<div>')
-//						.css({
-//							top:	article.position().top - defaults.borderWidth,
-//							left:	article.position().left - defaults.borderWidth + parseFloat(article.css('margin-left'))
-//						})
-//						.width(article.width())
-//						.addClass('article-hover')
-//						.html(article.html())
-//						.bind('mouseleave', function() {
-//							$(this).fadeOut();
-//						})
-//					;
-//
-//					if(article.hasClass(defaults.xxlClass) === true) {
-//						hover.addClass(defaults.xxlClass);
-//					}
-//
-//					parent.prepend(hover);
-//
-//				} else {
-//					hover
-//						.css({
-//							top:	article.position().top - defaults.borderWidth,
-//							left:	article.position().left - defaults.borderWidth + parseFloat(article.css('margin-left'))
-//						})
-//						.width(article.width());
-//				}
-//				hover.fadeIn();
-//			});
-//		});
-//	};
-
 	// -------------------------------------------------------------------------------------
 	// ArticleImageSelection
 	// @todo eventuell border-width ausrechnen
 	$.fn.articleImageSelection = function(options) {
-		var defaults 	= {
-			magnifier: null
-		};
+		var defaults 	= {};
 		var settings 	= $.extend({}, defaults, options);
 		var enlarge		= $('#article-properties-image img');
 		var active		= $(this)
@@ -153,7 +98,7 @@
 				enlarge
 					.attr('src', $(this).data('image-url'))
 					.attr('data-large', $(this).data('large-url'));
-				
+
 				return false;
 			});
 		});
@@ -186,21 +131,6 @@
 		if(typeof($(window).lazyload) !== 'undefined') {
 			$('.lazy-load').lazyload();
 		}
-		
-		// -------------------------------------------------------------------------------------
-		// Magnifier
-		$(window).bind('load', function() {
-			$("#article-properties-image img").imagezoomsl({ 						
-				zoomstart: 1,
-				magnifierborder: '10px solid #fff',
-				cursorshadeborder: '5px solid #7b7b7b',
-				magnifiereffectanimate: 'fadeIn',	
-			});
-			
-			// -----------------------------------------------------------------------------------
-			// ArticleImageSelection
-			$('#article-properties-image-selection li').articleImageSelection();		
-		});
 
 		// -------------------------------------------------------------------------------------
 		// ArticleHover
@@ -233,6 +163,59 @@
 		// BasketNewArticle
 		$('#basket-new-article-notice').delay(2000).fadeOut(1000);
 
+		// -------------------------------------------------------------------------------------
+		// Magnifier
+		if(typeof($(window).imagezoomsl) !== 'undefined') {
+			$(window).bind('load', function() {
+				$("#article-properties-image img").imagezoomsl({
+					zoomstart: 1,
+					magnifierborder: '10px solid #fff',
+					cursorshadeborder: '5px solid #7b7b7b',
+					magnifiereffectanimate: 'fadeIn'
+				});
+
+				// ---------------------------------------------------------------------------------
+				// ArticleImageSelection
+				$('#article-properties-image-selection li').articleImageSelection();
+			});
+		}
+
+		// -------------------------------------------------------------------------------------
+		// Share
+		$('.container-share a').each(function() {
+
+			var link	= $(this);
+			var url		= link.prop('href');
+			var title	= link.prop('title');
+
+			var windowWidth		= 580;
+			var windowHeight	= 470;
+
+			// remove target=blank for JS-Browsers
+			link.removeAttr('target');
+
+			link.bind('click', function() {
+
+				// Fixes dual-screen position                         Most browsers      Firefox
+				var dualScreenLeft = window.screenLeft !== undefined ? window.screenLeft : screen.left;
+				var dualScreenTop = window.screenTop !== undefined ? window.screenTop : screen.top;
+
+				var width = window.innerWidth ? window.innerWidth : document.documentElement.clientWidth ? document.documentElement.clientWidth : screen.width;
+				var height = window.innerHeight ? window.innerHeight : document.documentElement.clientHeight ? document.documentElement.clientHeight : screen.height;
+
+				var left = ((width / 2) - (windowWidth / 2)) + dualScreenLeft;
+				var top = ((height / 3) - (windowHeight / 3)) + dualScreenTop;
+
+				var shareWindow = window.open(url, title, 'scrollbars=yes, width=' + windowWidth + ', height=' + windowHeight + ', top=' + top + ', left=' + left);
+
+				// Puts focus on the newWindow
+				if(window.focus) {
+					shareWindow.focus();
+				}
+
+				return false;
+			});
+		});
 
 		// -------------------------------------------------------------------------------------
 		// Basket | UserAddresses
@@ -321,5 +304,4 @@
 			});
 		});
 	});
-
 }(window.jQuery);
