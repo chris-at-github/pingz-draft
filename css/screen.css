@@ -401,7 +401,7 @@ a.button {
   height: 26px;
   display: inline-block;
   padding: 0;
-  background: #e00d4d url(/images/icons.png) no-repeat 0 0; }
+  background: #e00d4d url(../img/icons.png) no-repeat 0 0; }
 
 .ie .button-icon {
   width: 26px; }
@@ -410,18 +410,18 @@ a.button {
   background-color: #c90c45; }
 
 .button-icon-basket {
-  background-image: url(/images/icons/basket.png);
+  background-image: url(../img/icons/basket.png);
   background-position: 6px 9px; }
 
 .button-icon-arrow {
-  background-image: url(/images/arrow.png);
+  background-image: url(../img/arrow.png);
   background-position: 8px 0; }
 
 .button-icon-arrow-white-right {
   background-position: 8px -491px; }
 
 .button-icon-pencil {
-  background-image: url(/images/sprites/icon-pencil.png); }
+  background-image: url(../img/sprites/icon-pencil.png); }
 
 /* form-inline
 ----------------------------------------------------------------------------------------*/

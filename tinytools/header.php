@@ -136,7 +136,7 @@
 
 		<?php if($_T_CONFIG['section']['header'] === true) { ?>
 			<header id="header" class="clearfix">
-				<div id="logo"><a href="/" title="Logo mit Link auf die Pingz Startseite"><img src="/images/logo.png" alt="Logo Pingz" /></a></div>
+				<div id="logo"><a href="/" title="Logo mit Link auf die Pingz Startseite"><img src="/img/logo.png" alt="Logo Pingz" /></a></div>
 				<nav id="headmenu">
 					<ul class="clearfix">
 						<li class="dropdown">

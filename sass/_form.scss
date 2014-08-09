@@ -129,7 +129,7 @@ a.button {
 	height: 26px;
 	display: inline-block;
 	padding: 0;
-	background: $pink url(/images/icons.png) no-repeat 0 0;
+	background: $pink url(../img/icons.png) no-repeat 0 0;
 }
 
 .ie .button-icon {
@@ -141,12 +141,12 @@ a.button {
 }
 
 .button-icon-basket {
-	background-image: url(/images/icons/basket.png);
+	background-image: url(../img/icons/basket.png);
 	background-position: 6px 9px;
 }
 
 .button-icon-arrow {
-	background-image: url(/images/arrow.png);
+	background-image: url(../img/arrow.png);
 	background-position: 8px 0;
 }
 
@@ -155,7 +155,7 @@ a.button {
 }
 
 .button-icon-pencil {
-	background-image: url(/images/sprites/icon-pencil.png);
+	background-image: url(../img/sprites/icon-pencil.png);
 }
 
 /* form-inline
