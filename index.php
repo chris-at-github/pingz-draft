@@ -24,7 +24,7 @@
 						<div class="teaser-inner">
 							<h1>Große Wärmekissen</h1>
 							<p>
-								Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+								La la Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
 							</p>
 						</div>
 						<div class="call-to-action teaser-call-to-action"><a href="/dinkelkissen/"><span>zu den <strong>Produkten</strong></span></a></div>
