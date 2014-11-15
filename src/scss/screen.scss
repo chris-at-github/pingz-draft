@@ -202,14 +202,14 @@ dd.dd-margined {
 	button {
 		position: absolute;
 		top: 5px; right: 5px;
-		width: 16px;
-		height: 16px;
+		width: 18px;
+		height: 18px;
 		padding: 0;
-		background: url(../img/icons/close.png) no-repeat 5px 3px;
+		background: $grey url(../img/icons/close.png) no-repeat 4px 4px;
 	}
 
 	button:hover {
-		background-position: 5px -47px;
+		background-color: $pink;
 	}
 
 	.ui-button-text {
