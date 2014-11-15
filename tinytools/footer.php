@@ -1,9 +1,9 @@
 			<?php if($_T_CONFIG['widescreen'] === false) { ?>
 					</div>
-				</div>	
+				</div>
 			<?php } ?>
 		</div>
-		
+
 		<?php if($_T_CONFIG['section']['footer'] === true) { ?>
 			<footer>
 				<div id="footer-container">
@@ -20,7 +20,7 @@
 											))
 											->render();
 									?>
-								</nav>	
+								</nav>
 							</div>
 						</div>
 						<div class="grid grid-33">
@@ -37,7 +37,7 @@
 										</div>
 									</form>
 								</div>
-								
+
 								<div id="social-links">
 									<h2>Besuchen Sie uns auch auf</h2>
 									<ul class="clearfix">
@@ -65,21 +65,21 @@
 					</nav>
 				</div>
 			</footer>
-		<?php } ?>	
+		<?php } ?>
 
 	</div>
 	<!-- /page -->
 
 	<!-- script -->
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-	<script type="text/javascript">!window.jQuery && document.write(unescape('%3Cscript type="text/javascript" src="/script/jquery-1.9.1.js"%3E%3C/script%3E'))</script>
-	<script type="text/javascript" src="/script/jquery-ui-1.10.3.min.js"></script>
+	<script type="text/javascript">!window.jQuery && document.write(unescape('%3Cscript type="text/javascript" src="/js/jquery-1.9.1.js"%3E%3C/script%3E'))</script>
+	<script type="text/javascript" src="/js/jquery-ui-1.10.3.min.js"></script>
 	<?php if(empty($_T_CONFIG['script']) === false) { ?>
 		<?php foreach($_T_CONFIG['script'] as $script) { ?>
 			<script type="text/javascript" src="<?php echo $script; ?>"></script>
 		<?php } ?>
 	<?php } ?>
-	<script type="text/javascript" src="/script/pingz.functions.js"></script>
+	<script type="text/javascript" src="/js/pingz.functions.js"></script>
 	<!-- /script -->
 
 </body>
