@@ -38,6 +38,13 @@ gulp.task('scripts', function() {
 		.pipe(stripDebug())
 		.pipe(uglify())
 		.pipe(gulp.dest('./js/'));
+
+	gulp.src(['./src/js/**/*.js'])
+		.pipe(plumber())
+		// .pipe(concat('script.js'))
+		.pipe(stripDebug())
+		.pipe(uglify())
+		.pipe(gulp.dest('./js/'));
 });
 
 // CSS concat, auto-prefix and minify
