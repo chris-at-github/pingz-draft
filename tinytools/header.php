@@ -72,18 +72,6 @@
 	$widget			= tWidget::singleton()
 		->setConfiguration($_T_CONFIG)
 		->setData($_T_WIDGET);
-
-/*
-|-----------------------------------------------------------------
-| CssCrush
-|-----------------------------------------------------------------
-| CSS Crush is an extensible PHP based CSS preprocessor that aims
-| to alleviate many of the hacks and workarounds necessary in
-| modern CSS development.
-|
-*/
-	include($_SERVER['DOCUMENT_ROOT'] . '/tinytools/php/vendors/csscrush/CssCrush.php');
-
 ?>
 <!doctype html>
 <!--[if ie 7]> <html class="no-js ie ie7" lang="de" xmlns="http://www.w3.org/1999/xhtml"> <![endif]-->
@@ -119,7 +107,6 @@
 	<link rel="icon" href="/favicon.ico" type="image/x-icon">
 
 	<!-- style -->
-	<?php /*<link rel="stylesheet" type="text/css" href="<?php echo csscrush::file($_SERVER['DOCUMENT_ROOT'] . '/css/screen.css', $_T_CONFIG['csscrush']); ?>" media="screen, projection, print" />*/ ?>
 	<link rel="stylesheet" type="text/css" href="/css/screen.css" media="screen, projection, print" />
 	<?php if(empty($_T_CONFIG['css']) === false) { ?>
 		<?php foreach($_T_CONFIG['css'] as $css) { ?>
