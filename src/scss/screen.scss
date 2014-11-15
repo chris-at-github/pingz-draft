@@ -1636,7 +1636,8 @@ dd.dd-margined {
 	li {
 		width: 20%;
 		float: left;
-		color: $grey-lighter;
+		color: $grey;
+		line-height: 20px;
 	}
 
 	.identifier {
@@ -1732,8 +1733,10 @@ td.checkout-article-title {
 	text-align: center;
 }
 
-.checkout-article-quantity :input-any {
-	text-align: center;
+.checkout-article-quantity {
+	#{$input-any} {
+		text-align: center;
+	}
 }
 
 .checkout-article-quantity .parsley-error-container {
@@ -1871,6 +1874,19 @@ td.checkout-article-title {
 	.checkout-payment-inner {
 		padding: 15px;
 		background: $white;
+	}
+}
+
+.form-payment-oxidpaypal {
+	& > .form-label {
+		& {
+			margin: 0 0 0 13px;
+			float: none;
+		}
+
+		 img {
+			width: 100px;
+		}
 	}
 }
 

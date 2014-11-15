@@ -188,3 +188,34 @@ a.button {
 		padding: 0;
   }
 }
+
+/* checkbox | radio
+----------------------------------------------------------------------------------------*/
+.form-radio, .form-checkbox {
+	.form-label {
+		float: left;
+	}
+
+	.form-field {
+		& {
+			float: left;
+			margin: 0 4px 0 0;
+		}
+
+		input {
+			position: relative;
+			top: 2px;
+			left: 1px;
+		}
+	}
+}
+
+.form-radio-inline, .form-checkbox-inline  {
+	.form-item{
+		float: left;
+	}
+
+	.form-item + .form-item {
+		padding: 0 0 0 10px;
+	}
+}
