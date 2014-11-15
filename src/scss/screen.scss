@@ -5,9 +5,6 @@
 @import '_grid.scss';
 @import '_form.scss';
 
-/* Pingz
-----------------------------------------------------------------------------------------*/
-
 /* pretty-checkbox | pretty-radio
 ----------------------------------------------------------------------------------------*/
 .pretty-radio-placeholder, .pretty-checkbox-placeholder, .pretty-checkbox-dummy-placeholder {
@@ -22,7 +19,7 @@
 .ie7 {
 	.pretty-radio-placeholder, .pretty-checkbox-placeholder, .pretty-checkbox-dummy-placeholder {
 		position: relative;
-		top:- 2px;
+		top: -2px;
 	}
 }
 

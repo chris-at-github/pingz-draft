@@ -21,8 +21,8 @@ var minifyCSS		= require('gulp-minify-css');
 
 // minify new images
 gulp.task('imagemin', function() {
-	var imageSource	= './src/images/**/*',
-			imageBuild	= './images';
+	var imageSource	= './src/img/**/*',
+			imageBuild	= './img';
 
 	gulp.src(imageSource)
 		.pipe(changed(imageBuild))
@@ -32,14 +32,6 @@ gulp.task('imagemin', function() {
 
 // JS concat, strip debugging and minify
 gulp.task('scripts', function() {
-//	gulp.src('src/js/app.js')
-//		.pipe(plumber())
-//		.pipe(browserify({
-//			insertGlobals: true
-//		}))
-//		.pipe(uglify())
-//		.pipe(gulp.dest('./js/'));
-
 	gulp.src(['./src/js/*.js'])
 		.pipe(plumber())
 		.pipe(concat('script.js'))
