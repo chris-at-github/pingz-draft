@@ -89,7 +89,7 @@
 	.prev, .next {
 		height:	27px;
 		line-height: 0;
-		background: $grey-lighter url(../img/arrow.png) no-repeat 8px -990px;
+		background: $grey-lighter url(../../img/arrow.png) no-repeat 8px -990px;
 	}
 
 	.prev:hover, .prev:focus, .prev:active {
@@ -117,7 +117,7 @@
 
 .ul-default li {
 	padding: 0 0 0 14px;
-	background: url(../img/arrow.png) no-repeat 1px -95px;
+	background: url(../../img/arrow.png) no-repeat 1px -95px;
 }
 
 .ul-gap li {
@@ -205,7 +205,7 @@ dd.dd-margined {
 		width: 18px;
 		height: 18px;
 		padding: 0;
-		background: $grey url(../img/icons/close.png) no-repeat 4px 4px;
+		background: $grey url(../../img/icons/close.png) no-repeat 4px 4px;
 	}
 
 	button:hover {
@@ -342,7 +342,7 @@ dd.dd-margined {
 		height: 51px;
 		float: left;
 		border: 0;
-		background: url(../img/logo.png) no-repeat 0 0;
+		background: url(../../img/logo.png) no-repeat 0 0;
 	}
 
 	a:hover, a:active, a:focus {
@@ -443,7 +443,7 @@ dd.dd-margined {
 // 		height: 9px;
 // 		display: inline-block;
 // 		padding: 0 5px 0 0;
-// 		background: url(../img/arrow.png) no-repeat right 3px;
+// 		background: url(../../img/arrow.png) no-repeat right 3px;
 // 	}
 
 // 	.dropdown.open .caret {
@@ -495,7 +495,7 @@ dd.dd-margined {
 	li {
 		& {
 			padding: 0 14px 0 5px;
-			background: url(../img/arrow.png) no-repeat right -99px;
+			background: url(../../img/arrow.png) no-repeat right -99px;
 		}
 
 		&.last-child, &.last-child a, &.last-child strong {
@@ -529,7 +529,7 @@ dd.dd-margined {
 	display: block;
 	padding: 11px 15px 5px 15px;
 	border: 0;
-	background: #e00d4d url(../img/sprites/basket.png) no-repeat 162px 14px;
+	background: #e00d4d url(../../img/sprites/basket.png) no-repeat 162px 14px;
 	color: #fff;
 	line-height: 1;
 	letter-spacing: 1px;
@@ -554,7 +554,7 @@ dd.dd-margined {
 
 #basket-status-price {
 	padding: 0 0 0 13px;
-	background: url(../img/sprites/basket-status-divider.png) no-repeat 5px 6px;
+	background: url(../../img/sprites/basket-status-divider.png) no-repeat 5px 6px;
 }
 
 #basket-new-article-notice {
@@ -671,7 +671,7 @@ dd.dd-margined {
 	}
 
 	.button-icon:hover, .button-icon:focus {
-		background-color: $grey-lighter;
+		background-color: $grey-darker;
 	}
 
 	::-webkit-input-placeholder {
@@ -721,7 +721,7 @@ dd.dd-margined {
 		height: 32px;
 		float: left;
 		margin: 0 5px 0 0;
-		background: url(../img/sociallinks.png) no-repeat 0 0;
+		background: url(../../img/sociallinks.png) no-repeat 0 0;
 	}
 
 	span {
@@ -846,7 +846,7 @@ dd.dd-margined {
 			height: 26px;
 			float: left;
 			margin: 0 5px 0 0;
-			background: $pink url(../img/sprites/icons-container.png) no-repeat 0 0;
+			background: $pink url(../../img/sprites/icons-container.png) no-repeat 0 0;
 			vertical-align: top;
 		}
 
@@ -898,7 +898,7 @@ dd.dd-margined {
 			display: block;
 			width: 35px;
 			height: 25px;
-			background: url(../img/social.png) no-repeat 0 0;
+			background: url(../../img/social.png) no-repeat 0 0;
 		}
 
 		.facebook {
@@ -1027,7 +1027,7 @@ dd.dd-margined {
 
 	span {
 		padding: 0 25px 0 0;
-		background: url(../img/sprites/icon-call-to-action.png) no-repeat right 4px;
+		background: url(../../img/sprites/icon-call-to-action.png) no-repeat right 4px;
 	}
 }
 
@@ -1045,7 +1045,7 @@ dd.dd-margined {
 		float: left;
 		color: #fff;
 		text-align: right;
-		background: #e00d4d url(../img/teaser-grosse-waermekissen.jpg) no-repeat 0 0;
+		background: #e00d4d url(../../img/teaser-grosse-waermekissen.jpg) no-repeat 0 0;
 	}
 
 	#{$h1} {
@@ -1201,7 +1201,7 @@ dd.dd-margined {
 		top: 0; right: 0;
 		width: 65px;
 		height: 65px;
-		background: url(../img/sprites/article-xxl.png) no-repeat 0 0;
+		background: url(../../img/sprites/article-xxl.png) no-repeat 0 0;
 	}
 
 	.article-default {
@@ -1434,7 +1434,7 @@ dd.dd-margined {
 		height: 23px;
 		display: block;
 		border: 2px solid $white;
-		background: url(../img/article-colors.png) no-repeat 0 0;
+		background: url(../../img/article-colors.png) no-repeat 0 0;
 	}
 
 	li label:hover, li label.checked {
@@ -1586,7 +1586,7 @@ dd.dd-margined {
 		top: 85px;
 		width: 24px;
 		height: 72px;
-		background: url(../img/chevron.png) no-repeat 0 0;
+		background: url(../../img/chevron.png) no-repeat 0 0;
 	}
 
 	.carousel-control-next {

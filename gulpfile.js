@@ -22,7 +22,7 @@ var minifyCSS		= require('gulp-minify-css');
 // minify new images
 gulp.task('imagemin', function() {
 	var imageSource	= './src/img/**/*',
-			imageBuild	= './img';
+			imageBuild	= './out/pingz/img';
 
 	gulp.src(imageSource)
 		.pipe(changed(imageBuild))
@@ -32,19 +32,19 @@ gulp.task('imagemin', function() {
 
 // JS concat, strip debugging and minify
 gulp.task('scripts', function() {
-	gulp.src(['./src/js/*.js'])
+	gulp.src(['./src/js/**/*'])
 		.pipe(plumber())
 		// .pipe(concat('script.js'))
 		.pipe(stripDebug())
 		.pipe(uglify())
-		.pipe(gulp.dest('./js/'));
+		.pipe(gulp.dest('./out/pingz/src/js/'));
 
-	gulp.src(['./src/js/**/*.js'])
-		.pipe(plumber())
-		// .pipe(concat('script.js'))
-		.pipe(stripDebug())
-		.pipe(uglify())
-		.pipe(gulp.dest('./js/'));
+	// gulp.src(['./src/js/**/*.js'])
+	// 	.pipe(plumber())
+	// 	// .pipe(concat('script.js'))
+	// 	.pipe(stripDebug())
+	// 	.pipe(uglify())
+	// 	.pipe(gulp.dest('./js/'));
 });
 
 // CSS concat, auto-prefix and minify
@@ -54,7 +54,7 @@ gulp.task('styles', function() {
 		.pipe(sass())
 		.pipe(autoprefix('last 2 versions'))
 		.pipe(minifyCSS())
-		.pipe(gulp.dest('./css/'));
+		.pipe(gulp.dest('./out/pingz/src/css/'));
 });
 
 // default gulp task

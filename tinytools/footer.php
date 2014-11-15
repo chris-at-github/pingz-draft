@@ -72,14 +72,14 @@
 
 	<!-- script -->
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-	<script type="text/javascript">!window.jQuery && document.write(unescape('%3Cscript type="text/javascript" src="/js/jquery-1.9.1.js"%3E%3C/script%3E'))</script>
-	<script type="text/javascript" src="/js/jquery-ui-1.10.3.min.js"></script>
+	<script type="text/javascript">!window.jQuery && document.write(unescape('%3Cscript type="text/javascript" src="/out/pingz/src/js/jquery-1.9.1.js"%3E%3C/script%3E'))</script>
+	<script type="text/javascript" src="/out/pingz/src/js/jquery-ui-1.10.3.min.js"></script>
 	<?php if(empty($_T_CONFIG['script']) === false) { ?>
 		<?php foreach($_T_CONFIG['script'] as $script) { ?>
 			<script type="text/javascript" src="<?php echo $script; ?>"></script>
 		<?php } ?>
 	<?php } ?>
-	<script type="text/javascript" src="/js/pingz.functions.js"></script>
+	<script type="text/javascript" src="/out/pingz/src/js/pingz.functions.js"></script>
 	<!-- /script -->
 
 </body>

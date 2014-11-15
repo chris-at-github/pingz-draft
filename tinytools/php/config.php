@@ -32,14 +32,8 @@ $_T_CONFIG_DEFAULT = array(
 	'css'	=> array(),
 
 	'script'	=> array(
-		'/js/i18n/messages.de.js',
-		'/js/parsley-1.1.16.js'
-	),
-
-	'csscrush'	=> array(
-		'minify'				=> false,
-		'boilerplate'		=> false,
-		'output_dir'		=> $_SERVER['DOCUMENT_ROOT'] . '/tinytools/temp'
+		'/out/pingz/src/js/i18n/messages.de.js',
+		'/out/pingz/src/js/parsley-1.1.16.js'
 	)
 );
 

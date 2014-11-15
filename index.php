@@ -3,7 +3,7 @@
 	$_T_CONFIG_LOCAL = array(
 		'widescreen'	=> true,
 		'script'			=> array(
-			'/js/jcarousel-0.0.3.js'
+			'/out/pingz/src/js/jcarousel-0.0.3.js'
 		),
 		'css'	=> array(
 		),
@@ -42,7 +42,7 @@
 								<ul>
 									<li>
 										<a href="/dinkelkissen/smart-stars-stripes.html">
-											<span class="article-link-image"><img src="/img/articles/thumb/180_250_75/smart_stars_and_stripes_intro.jpg" alt="Smart Stars &amp; Stripes"></span>
+											<span class="article-link-image"><img src="/out/pingz/img/articles/thumb/180_250_75/smart_stars_and_stripes_intro.jpg" alt="Smart Stars &amp; Stripes"></span>
 											<span class="article-link-title h3">Smart <strong>Stars &amp; Stripes</strong></span>
 											<span class="article-link-price">19,90 € <span class="article-price-notify">*</span></span>
 										</a>
@@ -50,7 +50,7 @@
 
 									<li>
 										<a href="/dinkelkissen/stretched-acid-dots.html">
-											<span class="article-link-image"><img src="/img/articles/thumb/180_250_75/stretched_acid_dots_intro.jpg" alt="Stretched Acid Dots"></span>
+											<span class="article-link-image"><img src="/out/pingz/img/articles/thumb/180_250_75/stretched_acid_dots_intro.jpg" alt="Stretched Acid Dots"></span>
 											<span class="article-link-title h3">Stretched <strong>Acid Dots</strong></span>
 											<span class="article-link-price">24,90 € <span class="article-price-notify">*</span></span>
 										</a>
@@ -58,7 +58,7 @@
 
 									<li>
 										<a href="/dinkelkissen/squared-ms-prison.html">
-											<span class="article-link-image"><img src="/img/articles/thumb/180_250_75/squared_ms_prison_intro.jpg" alt="Squared Ms. Prison"></span>
+											<span class="article-link-image"><img src="/out/pingz/img/articles/thumb/180_250_75/squared_ms_prison_intro.jpg" alt="Squared Ms. Prison"></span>
 											<span class="article-link-title h3">Squared <strong>Ms. Prison</strong></span>
 											<span class="article-link-price">14,90 € <span class="article-price-notify">*</span></span>
 										</a>
@@ -66,7 +66,7 @@
 
 									<li>
 										<a href="/dinkelkissen/smart-bluepoint.html">
-											<span class="article-link-image"><img src="/img/articles/thumb/180_250_75/smart_bluepoint_intro.jpg" alt="Smart Bluepoint"></span>
+											<span class="article-link-image"><img src="/out/pingz/img/articles/thumb/180_250_75/smart_bluepoint_intro.jpg" alt="Smart Bluepoint"></span>
 											<span class="article-link-title h3">Smart <strong>Bluepoint</strong></span>
 											<span class="article-link-price">19,90 € <span class="article-price-notify">*</span></span>
 										</a>

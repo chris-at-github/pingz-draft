@@ -107,7 +107,7 @@
 	<link rel="icon" href="/favicon.ico" type="image/x-icon">
 
 	<!-- style -->
-	<link rel="stylesheet" type="text/css" href="/css/screen.css" media="screen, projection, print" />
+	<link rel="stylesheet" type="text/css" href="/out/pingz/src/css/screen.css" media="screen, projection, print" />
 	<?php if(empty($_T_CONFIG['css']) === false) { ?>
 		<?php foreach($_T_CONFIG['css'] as $css) { ?>
 			<link rel="stylesheet" type="text/css" href="<?php echo $css; ?>" media="screen, projection, print" />
@@ -123,7 +123,7 @@
 
 		<?php if($_T_CONFIG['section']['header'] === true) { ?>
 			<header id="header" class="clearfix">
-				<div id="logo"><a href="/" title="Logo mit Link auf die Pingz Startseite"><img src="/img/logo.png" alt="Logo Pingz" /></a></div>
+				<div id="logo"><a href="/" title="Logo mit Link auf die Pingz Startseite"><img src="/out/pingz/img/logo.png" alt="Logo Pingz" /></a></div>
 				<nav id="headmenu">
 					<ul class="clearfix">
 						<li class="dropdown">
