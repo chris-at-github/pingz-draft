@@ -6,12 +6,12 @@
 |-------------------------------------------------------------------------------
 */
 $_T_CONFIG_DEFAULT = array(
-	
+
 	'meta' => array(
 		'keywords'		=> 'Pingz, Wärmekissen, XXL, Dinkel, Kirschkern, klein, groß',
 		'description'	=> 'Eine Auswahl von stylischen, selbstproduzierten Wärmekissen mit Dinkel- oder Kirschkernfüllung. Mit passenden Größen sowohl für die ganz Kleinen als auch XXL-Wärmekissen für die großen Genießer.'
 	),
-	
+
 	'breadcrumb'	=> array(
 		'root'	=>	array(
 			'url'		=> '/',
@@ -19,23 +19,23 @@ $_T_CONFIG_DEFAULT = array(
 		),
 		'seperator'	=> ' &#187; '
 	),
-	
+
 	'section'	=> array(
 		'header'			=> true,
 		'footer'			=> true,
 		'breadcrumb'	=> true,
 		'bodyheader'	=> true
 	),
-	
+
 	'widescreen'	=> false,
-	
+
 	'css'	=> array(),
-	
+
 	'script'	=> array(
-		'/script/i18n/messages.de.js',
-		'/script/parsley-1.1.16.js'
+		'/js/i18n/messages.de.js',
+		'/js/parsley-1.1.16.js'
 	),
-		
+
 	'csscrush'	=> array(
 		'minify'				=> false,
 		'boilerplate'		=> false,
@@ -67,7 +67,7 @@ $_T_MENU['mainmenu'] = array(
 			'/dinkelkissen/smart-bluepoint/' => array(
 				'title'	=> 'Smart Bluepoint',
 				'menu'	=> false
-			)			
+			)
 		)
 	),
 	'/ueber-uns/' => array(
@@ -111,7 +111,7 @@ $_T_MENU['user'] = array(
 			),
 			'/konto/registrieren/' => array(
 				'title'	=> 'Registrieren'
-			)				
+			)
 		)
 	)
 );
@@ -119,7 +119,7 @@ $_T_MENU['user'] = array(
 $_T_MENU['header'] = array(
 	'/konto/registrieren/' => array(
 		'title'	=> 'Registrieren'
-	),				
+	),
 	'/hilfe/' => array(
 		'title'	=> 'Hilfe',
 		'children'	=> array(
@@ -161,7 +161,7 @@ $_T_MENU['footerSitemap'] = array(
 			),
 			'/service/haeufige-fragen/' => array(
 				'title'	=> 'Häufige Fragen'
-			)				
+			)
 		)
 	),
 	'/produktinformationen/'	=> array(
@@ -169,7 +169,7 @@ $_T_MENU['footerSitemap'] = array(
 		'children'	=> array(
 			'/produktinformationen/dinkel/' => array(
 				'title'	=> 'Dinkel'
-			),		
+			),
 			'/produktinformationen/anwendungsmoeglichkeiten/' => array(
 				'title'	=> 'Anwendungsmöglichkeiten'
 			),
@@ -191,7 +191,7 @@ $_T_MENU['footerSitemap'] = array(
 				'title'	=> 'Widerrufsbelehrung'
 			)
 		)
-	)	
+	)
 );
 
 $_T_MENU['footer'] = array(
@@ -203,7 +203,7 @@ $_T_MENU['footer'] = array(
 	),
 	'/ueber-uns/'	=> array(
 		'title'			=> 'Über uns',
-	)	
+	)
 );
 
 /*
