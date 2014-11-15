@@ -1807,6 +1807,20 @@ td.checkout-article-title {
 	}
 }
 
+/* checkout-basket-voucher
+----------------------------------------------------------------------------------------*/
+#checkout-basket-voucher {
+	& {
+		clear: left;
+		padding: 20px 0 0 0;
+	}
+
+	form {
+		padding: 20px 0 0 0;
+		border-top: 1px solid $grey-lighter;
+	}
+}
+
 /* checkout-addresses
 ----------------------------------------------------------------------------------------*/
 .user-addresses-grid {

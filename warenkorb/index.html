@@ -5,7 +5,7 @@
 		'css'					=> array(),
 		'widescreen'	=> true
 	);
-	
+
 	$_T_WIDGET_LOCAL = array(
 		'steps'			=> '/widget/checkout-steps.html',
 		'articles'	=> '/widget/checkout-articles.html'
@@ -15,14 +15,37 @@
 <?php include($_SERVER['DOCUMENT_ROOT'] . '/tinytools/header.php'); ?>
 
 	<?php echo $widget->render('steps'); ?>
-	
-	<form action="/warenkorb/2/" method="post"> 
+
+	<form action="/warenkorb/2/" method="post">
 		<?php echo $widget->render('articles', array('editable' => true)); ?>
-		
-		<div id="checkout-articles-price-notify">
-			<?php echo $widget->render('article-price-notify'); ?>
-		</div>
-		
+	</form>
+
+	<div id="checkout-articles-price-notify">
+		<?php echo $widget->render('article-price-notify'); ?>
+	</div>
+
+	<div id="checkout-basket-voucher">
+		<form action="http://localhost:8001/index.php?" method="post">
+			<div>
+				<input type="hidden" name="stoken" value="6AD5BEED">
+				<input type="hidden" name="lang" value="0">
+				<input type="hidden" name="cl" value="basket">
+				<input type="hidden" name="fnc" value="addVoucher">
+				<input type="hidden" name="CustomError" value="basket">
+			</div>
+
+			<div class="form-item">
+				<div class="form-label"><label for="voucher-no">Gutscheincode eingeben:</label></div>
+				<div class="form-field"><input id="voucher-no" type="text" name="voucherNr"></div>
+			</div>
+
+			<div class="form-actions">
+				<button type="submit" class="button">Gutschein absenden</button>
+			</div>
+		</form>
+	</div>
+
+	<form action="/warenkorb/2/" method="get">
 		<div class="form-actions checkout-form-actions clearfix">
 			<input type="submit" value="Weiter zum nächsten Schritt" class="button button-submit button-next button-large" />
 		</div>
