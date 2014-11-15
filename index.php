@@ -3,7 +3,7 @@
 	$_T_CONFIG_LOCAL = array(
 		'widescreen'	=> true,
 		'script'			=> array(
-			'/script/jcarousel-0.0.3.js'
+			'/js/jcarousel-0.0.3.js'
 		),
 		'css'	=> array(
 		),
