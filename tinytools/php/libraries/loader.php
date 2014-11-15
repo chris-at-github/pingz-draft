@@ -21,7 +21,7 @@ class tLoader {
 	 * @param string $name Name der Klasse die geladen werden soll
 	 * @return boolean
 	 */
-	public function _($classname) {
+	public static function _($classname) {
 		$filename		= strtolower(ltrim($classname, 't'));
 
 		// Instanz zur Klasse
@@ -40,7 +40,7 @@ class tLoader {
 	 * @param string $hash Pfad der Datei = Schluessel im globalen Array $_storage
 	 * @return boolean wurde die Datei bereits includiert true, ansonsten false
 	 */
-	public function exists($hash) {
+	public static function exists($hash) {
 		return array_key_exists(base64_encode($hash), self::$_storage);
 	}
 
@@ -52,7 +52,7 @@ class tLoader {
 	 * @param string $hash Pfad der Datei = Schluessel im globalen Array $_storage
 	 * @return none
 	 */
-	private function register($hash) {
+	private static function register($hash) {
 		self::$_storage[base64_encode($hash)] = true;
 	}
 
@@ -65,7 +65,7 @@ class tLoader {
 	 * 	entsprechen, sie muessen in diesem Fall jedoch alle vom selben Typ sein
 	 * @return boolean wurde die Datei erfolgreich geladen true, ansonsten false
 	 */
-	private function import($filepath) {
+	private static function import($filepath) {
 
 		// es ist ein Array aus Pfaden
 		if(is_array($filepath)) {
