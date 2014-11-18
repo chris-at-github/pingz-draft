@@ -325,7 +325,7 @@ dd.dd-margined {
 	}
 
 	#{$h1} {
-		margin: 15px 0 10px 0;
+		margin: 30px 0 10px 0;
 		color: $grey-darker;
 	}
 }
@@ -1049,7 +1049,6 @@ dd.dd-margined {
 	}
 
 	#{$h1} {
-		font-size: 24px;
 		letter-spacing: 4px;
 		color: $white;
 	}
@@ -1605,11 +1604,15 @@ dd.dd-margined {
 /* frontpage
 ----------------------------------------------------------------------------------------*/
 #frontpage-container {
-	margin: 35px 0 5px -65px;
-	padding: 10px 0 0 0;
-}
+	& {
+		margin: 35px 0 5px -65px;
+		padding: 10px 0 0 0;
+	}
 
-#frontpage-container {
+	#{$h1} {
+		font-size: 28px;
+	}
+
 	.grid-inner {
 		border-color: $grey-lighter;
 	}

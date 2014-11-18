@@ -58,13 +58,22 @@ p, table, dl, fieldset {
 }
 
 #{$h1} {
-	margin: 15px 0 10px 0;
-	font-family: $candara;
-	font-weight: normal;
-	font-size: 22px;
-	font-style: italic;
-	color: $grey-darker;
-	letter-spacing: 2px;
+	& {
+		margin: 15px 0 10px 0;
+		font-family: $candara;
+		font-weight: normal;
+		font-size: 32px;
+		font-style: italic;
+		color: $grey-darker;
+		letter-spacing: 2px;
+		line-height: 1.1;
+	}
+
+	.text-small {
+		display: block;
+		font-size: 17px;
+		line-height: 1;
+	}
 }
 
 #{$h2} {
