@@ -15,6 +15,10 @@
 		)
 	);
 
+	$_T_SCHEMA = array(
+		'type' => 'http://schema.org/Product'
+	);
+
 ?>
 <?php include($_SERVER['DOCUMENT_ROOT'] . '/tinytools/header.php'); ?>
 
@@ -22,16 +26,16 @@
 		<div class="fluid-grid equalheight-grid">
 			<div class="grid grid-55">
 				<div id="article-properties-image" class="grid-inner">
-					<img src="/out/pingz/img/articles/1/380_380_75/squared_ms_prison_intro.jpg" data-large="/out/pingz/img/articles/1/665_665_75/squared_ms_prison_intro.jpg" alt="Squared Ms. Prison">
+					<img itemprop="image" src="/out/pingz/img/articles/1/380_380_75/squared_ms_prison_intro.jpg" data-large="/out/pingz/img/articles/1/665_665_75/squared_ms_prison_intro.jpg" alt="Squared Ms. Prison">
 				</div>
 			</div>
 			<div class="grid grid-45 magnifier-preview" id="preview">
 				<div id="article-properties-data" class="grid-inner">
 					<dl class="dl-block">
 						<dt>Abmessungen:</dt>
-						<dd>20 x 20 cm</dd>
+						<dd><span itemprop="width">20 cm</span> x <span itemprop="height">20 cm</span></dd>
 						<dt>Gewicht:</dt>
-						<dd>ca. 240 g</dd>
+						<dd>ca. <span itemprop="weight">240 g</span></dd>
 						<dt>Material:</dt>
 						<dd>100% Baumwolle</dd>
 						<dt>Füllung:</dt>
@@ -41,7 +45,7 @@
 					</dl>
 
 					<div id="article-properties-tobasket">
-						<div id="article-properties-price">37,50 € <span class="article-price-notify">*</span></div>
+						<div id="article-properties-price" itemprop="offers" itemscope itemtype="http://schema.org/Offer"><span itemprop="price">37,50</span> <span itemprop="priceCurrency" content="EUR">€</span> <span class="article-price-notify">*</span></div>
 						<div id="article-properties-tobasket-form" class="form-inline clearfix">
 							<form action="/warenkorb/" method="post">
 								<div class="form-item">
@@ -83,14 +87,16 @@
 		</div>
 	</div>
 
-	<h2>Squared Dinkelkissen</h2>
-	<p>
-		<strong>Auch die bösen Mädels wollen's warm. Die Sträflingsstreifen mit Pink. Der absolute Eyecatcher in seiner Gewichtsklasse.</strong>
-	</p>
-	<p>
-		Unsere Squared Kissen eigenen sich besonders gut zur punktuellen Behandlung mit Wärme oder mit Kälte. Durch die handliche Größe bringen Sie die Wärme exakt an die richtigen Stellen und sorgen für wohltuende Wärme oder kühlende Frische.
-		<br />
-		Speziell für Kinder ist diese Größe bestens geeignet.
-	</p>
+	<div id="article-description" itemprop="description">
+		<h2>Squared Dinkelkissen</h2>
+		<p>
+			<strong>Auch die bösen Mädels wollen's warm. Die Sträflingsstreifen mit Pink. Der absolute Eyecatcher in seiner Gewichtsklasse.</strong>
+		</p>
+		<p>
+			Unsere Squared Kissen eigenen sich besonders gut zur punktuellen Behandlung mit Wärme oder mit Kälte. Durch die handliche Größe bringen Sie die Wärme exakt an die richtigen Stellen und sorgen für wohltuende Wärme oder kühlende Frische.
+			<br />
+			Speziell für Kinder ist diese Größe bestens geeignet.
+		</p>
+	</div>
 
 <?php include($_SERVER['DOCUMENT_ROOT'] . '/tinytools/footer.php'); ?>

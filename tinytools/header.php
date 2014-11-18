@@ -119,7 +119,7 @@
 <body class="no-js">
 
 	<!-- page -->
-	<div id="page" <?php if($_T_CONFIG['widescreen'] === true) { echo 'class="widescreen"'; } ?>>
+	<div id="page" <?php if(isset($_T_SCHEMA['type']) === true) { echo 'itemscope itemtype="' . $_T_SCHEMA['type'] . '"'; } ?><?php if($_T_CONFIG['widescreen'] === true) { echo 'class="widescreen"'; } ?>>
 
 		<?php if($_T_CONFIG['section']['header'] === true) { ?>
 			<header id="header" class="clearfix">
@@ -181,7 +181,7 @@
 							<?php echo $menu->renderBreadcrumb(); ?>
 						</div>
 					<?php } ?>
-					<h1><?php echo $_T_HEADER; ?></h1>
+					<h1 <?php if(isset($_T_SCHEMA['type']) === true) { echo 'itemprop="name"'; } ?>><?php echo $_T_HEADER; ?></h1>
 				</header>
 			<?php } ?>
 
