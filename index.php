@@ -32,12 +32,14 @@
 				</ul>
 			</div>
 
-			<div id="frontpage-container" class="fluid-grid border-grid equalheight-grid">
-				<div class="grid grid-66">
+			<div id="frontpage-container" class="fluid-grid">
+				<div class="background"></div>
+
+				<div id="article-frontpage-carousel" class="grid grid-66">
 					<div class="grid-inner">
 						<h2 class="h1">Beliebte Wärmekissen</h2>
 
-						<div class="article-grid article-frontpage-carousel">
+						<div class="article-grid">
 							<div data-jcarousel="true" data-wrap="circular" class="carousel">
 								<ul>
 									<li>

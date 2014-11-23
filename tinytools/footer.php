@@ -7,7 +7,9 @@
 		<?php if($_T_CONFIG['section']['footer'] === true) { ?>
 			<footer>
 				<div id="footer-container">
-					<div class="fluid-grid border-grid equalheight-grid">
+					<div class="background"></div>
+
+					<div class="fluid-grid">
 						<div class="grid grid-66">
 							<div class="grid-inner">
 								<nav id="footer-sitemap" class="clearfix">
