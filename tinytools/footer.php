@@ -29,7 +29,7 @@
 							<div class="grid-inner">
 								<div id="newsletter">
 									<strong class="h2">Newsletter</strong>
-									<form action="/newsletter/" method="post" class="form-inline clearfix">
+									<form action="/newsletter/" method="post" class="clearfix">
 										<div class="form-item">
 											<div class="form-label"><label for="newsletter-email">E-Mailadresse:</label></div>
 											<div class="form-field"><input type="text" id="newsletter-email" value="" placeholder="E-Mailadresse eingeben" /></div>

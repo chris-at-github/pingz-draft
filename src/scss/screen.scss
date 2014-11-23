@@ -676,13 +676,31 @@ dd.dd-margined {
 /* newsletter
 ----------------------------------------------------------------------------------------*/
 #newsletter {
-	padding: 15px 0;
-}
+	& {
+		padding: 15px 15px 15px 0;
+	}
 
-#newsletter {
+	form {
+		position: relative;
+	}
+
+	.form-item {
+		margin: 0 38px 0 0;
+	}
+
+	.form-label {
+		display: none;
+	}
+
 	#{$input-text} {
-		width: 220px;
+		width: 100%;
 		line-height: 18px;
+		@include box-sizing(border-box);
+	}
+
+	.form-actions {
+		position: absolute;
+		top: 0; right: 0;
 	}
 
 	.button-icon {
@@ -1856,10 +1874,6 @@ td.checkout-article-title {
 /* checkout-addresses
 ----------------------------------------------------------------------------------------*/
 .user-addresses-grid {
-	& {
-		// margin: 0 0 25px -25px;
-	}
-
 	& > .grid > .grid-inner {
 		position: relative;
 		padding: 15px;
