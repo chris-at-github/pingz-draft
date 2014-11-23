@@ -1,6 +1,7 @@
 /* Import
 ----------------------------------------------------------------------------------------*/
 @import '_pingz.scss';
+@import '_mixins.scss';
 @import '_normal.scss';
 @import '_grid.scss';
 @import '_form.scss';
@@ -160,7 +161,7 @@ dd.dd-margined {
 		width: 9px;
 		height: 9px;
 		box-shadow: 6px 5px 9px -9px black;
-		@include transform-rotate(45deg);
+		@include rotate(45deg);
 	}
 }
 
@@ -675,19 +676,19 @@ dd.dd-margined {
 	}
 
 	::-webkit-input-placeholder {
-		@include placeholder-default(18px);
+		@include placeholder(18px);
 	}
 
 	::-moz-placeholder {
-		@include placeholder-default(18px);
+		@include placeholder(18px);
 	}
 
 	:-ms-input-placeholder {
-		@include placeholder-default(18px);
+		@include placeholder(18px);
 	}
 
 	input:-moz-placeholder {
-		@include placeholder-default(18px);
+		@include placeholder(18px);
 	}
 }
 

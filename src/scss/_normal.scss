@@ -185,19 +185,19 @@ hr, .hr {
 }
 
 ::-webkit-input-placeholder {
-	@include placeholder-default();
+	@include placeholder();
 }
 
 ::-moz-placeholder {
-	@include placeholder-default();
+	@include placeholder();
 }
 
 :-ms-input-placeholder {
-	@include placeholder-default();
+	@include placeholder();
 }
 
 input:-moz-placeholder {
-	@include placeholder-default();
+	@include placeholder();
 }
 
 article, aside, footer, header, hgroup, nav, section {
