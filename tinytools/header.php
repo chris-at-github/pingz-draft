@@ -100,7 +100,7 @@
 	<meta name="revisit-after" content="3 days" />
 	<!-- /meta -->
 
-	<!--[if lt ie 9]><script src="/script/html5shiv.js"></script><![endif]-->
+	<!--[if lt ie 9]><script src="/out/pingz/src/js/html5shiv.js"></script><![endif]-->
 
 	<!-- favicon -->
 	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">

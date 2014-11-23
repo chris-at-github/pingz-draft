@@ -8,110 +8,50 @@
   @include make-column();
 }
 
-// .fluid-grid {
-// 	margin: 0 0 0 -25px;
-// 	*zoom: 1;
-// }
-
-.fluid-grid.fixed-grid {
-	margin: 0;
-}
-
-// .fluid-grid:before, .fluid-grid:after {
-//   display: table;
-//   content: '';
-//   line-height: 0;
-// }
-
-// .fluid-grid:after {
-//   clear: both;
-// }
-
-// .grid {
-// 	display: block;
-// 	width: 100%;
-// 	min-height: 10px;
-// 	float: left;
-// }
-
-.grid-inner, .form-item.grid-inner {
-	// margin-left: 25px;
-}
-
 .grid-25 {
   width: 25%;
-  *width: 24.791666666666668%;
 }
 
 .grid-30 {
   width: 30%;
-  *width: 29.791666666666664%;
 }
 
 .grid-33 {
   width: 33.33333333333333%;
-  *width: 33.05555555555555%;
 }
 
 .grid-35 {
   width: 35%;
-  *width: 34.79166666666667%;
 }
 
 .grid-40 {
   width: 40%;
-	*width: 39.791666666666664%;
 }
 
 .grid-45 {
   width: 45%;
-  *width: 44.79166666666667%;
 }
 
 .grid-50 {
   width: 50%;
-  *width: 49.791666666666664%;
 }
 
 .grid-55 {
   width: 55%;
-  *width: 54.79166666666667%;
 }
 
 .grid-60 {
   width: 60%;
-	*width: 59.791666666666664%;
 }
 
 .grid-66 {
   width: 66.66666666666666%;
-  *width: 66.38888888888889%;
 }
 
 .grid-75 {
   width: 75%;
-  *width: 74.79166666666667%;
 }
 
 .grid-100 {
   width: 100%;
-  *width: 99.79166666666667%;
 }
-
-// .border-grid {
-// 	margin: 0 0 0 -65px;
-// }
-
-// .border-grid .grid-inner {
-// 	padding: 0 0 0 32px;
-// 	margin: 0 0 0 32px;
-// 	border-left: 1px solid transparent;
-// }
-
-// .border-grid .grid:first-child .grid-inner {
-// 	border-color: transparent;
-// }
-
-// .border-grid-grey .grid-inner {
-// 	border-left: 1px solid $grey-light;
-// }
