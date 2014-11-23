@@ -1826,7 +1826,7 @@ td.checkout-article-title {
 		top: 4px;
 	}
 
-	.form-item, :button {
+	.form-item, #{$button} {
 		margin: 0 10px 0 0;
 	}
 }
