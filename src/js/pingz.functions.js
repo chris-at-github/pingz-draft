@@ -68,9 +68,6 @@
 	// -------------------------------------------------------------------------------------
 	// EqualHeight
 	$.fn.equalheight = function() {
-//		return this.height(Math.max.apply(this, $.map(this, function(e) {
-//			return $(e).height();
-//		})));
 		return $(this).css('min-height', (Math.max.apply(this, $.map(this, function(e) {
 			return $(e).height();
 		}))));
@@ -106,16 +103,22 @@
 
 	$(function() {
 		// -------------------------------------------------------------------------------------
-		// jCarousel
-		$('[data-jcarousel]').each(function() {
-				var el = $(this);
-				el.jcarousel(el.data());
-		});
+		// OwlCarousel
+		$('.carousel').owlCarousel({
+			loop: true,
+			margin: 10,
+    	nav: true,
+    	navText: ['<span>&lsaquo;</span>', '<span>&rsaquo;</span>'],
+			responsive: {
+				0: {
+					items: 1
+				},
 
-		$('[data-jcarousel-control]').each(function() {
-				var el = $(this);
-				el.jcarouselControl(el.data());
-		});
+        480: {
+          items: 2
+        }
+    }
+    });
 
 		// -------------------------------------------------------------------------------------
 		// EqualHeight
@@ -123,7 +126,6 @@
 			$('.equalheight-grid').each(function() {
 				$(this).children('.grid').children('.grid-inner').equalheight();
 			});
-			$('.ie7 #newsletter-email').css({'height': '1%'});
 		});
 
 		// -------------------------------------------------------------------------------------

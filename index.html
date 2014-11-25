@@ -3,7 +3,7 @@
 	$_T_CONFIG_LOCAL = array(
 		'widescreen'	=> true,
 		'script'			=> array(
-			'/out/pingz/src/js/jcarousel-0.0.3.js'
+			'/out/pingz/src/js/owl.carousel.js'
 		),
 		'css'	=> array(
 		),
@@ -57,8 +57,7 @@
 					<h2 class="h1">Beliebte Wärmekissen</h2>
 
 					<div class="article-grid">
-						<div data-jcarousel="true" data-wrap="circular" class="carousel">
-							<ul>
+							<ul class="carousel">
 								<li>
 									<a href="/dinkelkissen/smart-stars-stripes.html">
 										<span class="article-link-image"><img src="/out/pingz/img/articles/thumb/180_250_75/smart_stars_and_stripes_intro.jpg" alt="Smart Stars &amp; Stripes"></span>
@@ -92,9 +91,8 @@
 								</li>
 							</ul>
 						</div>
-						<a data-jcarousel-control="true" data-target="-=1" href="#" class="carousel-control-prev"><span>&lsaquo;</span></a>
-						<a data-jcarousel-control="true" data-target="+=1" href="#" class="carousel-control-next"><span>&rsaquo;</span></a>
-					</div>
+<!-- 						<a data-jcarousel-control="true" data-target="-=1" href="#" class="carousel-control-prev"><span>&lsaquo;</span></a>
+						<a data-jcarousel-control="true" data-target="+=1" href="#" class="carousel-control-next"><span>&rsaquo;</span></a> -->
 
 					<?php echo $widget->render('article-price-notify'); ?>
 				</div>
