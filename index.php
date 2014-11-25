@@ -24,7 +24,7 @@
 				<div class="background"></div>
 
 				<div class="teaser-inner">
-					<h1><span class="text-small">29. November 2014</span>Der Pingz Black Friday Deal</h1>
+					<h1><span class="text-small">28. November 2014</span>Der Pingz Black Friday Deal</h1>
 
 					<div class="fluid-grid description">
 						<div class="grid"><strong>10%</strong></div>
