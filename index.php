@@ -20,6 +20,21 @@
 
 	<div id="teaser" class="clearfix">
 		<ul>
+			<li class="black-friday">
+				<div class="background"></div>
+
+				<div class="teaser-inner">
+					<h1><span class="text-small">29. November 2014</span>Der Pingz Black Friday Deal</h1>
+
+					<div class="fluid-grid description">
+						<div class="grid"><strong>10%</strong></div>
+						<div class="grid">An diesem Freitag erhalten Sie 10% auf Ihre Bestellungen.<br />Einfach so!</div>
+					</div>
+
+					<div class="call-to-action"><a href="/dinkelkissen/"><span>Jetzt los shoppen</span></a></div>
+				</div>
+			</li>
+			<?php /*
 			<li>
 				<div class="teaser-inner">
 					<h1>Große Wärmekissen</h1>
@@ -29,6 +44,7 @@
 				</div>
 				<div class="call-to-action teaser-call-to-action"><a href="/dinkelkissen/"><span>zu den <strong>Produkten</strong></span></a></div>
 			</li>
+			*/ ?>
 		</ul>
 	</div>
 

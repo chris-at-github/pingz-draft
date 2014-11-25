@@ -1066,6 +1066,7 @@ dd.dd-margined {
 #teaser {
 	& {
 		margin: 0 0 20px 0;
+		overflow: hidden;
 	}
 
 	li {
@@ -1114,6 +1115,8 @@ dd.dd-margined {
 		}
 	}
 }
+
+@import '_black-friday.scss';
 
 /* article-grid
 ----------------------------------------------------------------------------------------*/
