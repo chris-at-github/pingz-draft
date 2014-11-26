@@ -104,21 +104,25 @@
 	$(function() {
 		// -------------------------------------------------------------------------------------
 		// OwlCarousel
-		$('.carousel').owlCarousel({
-			loop: true,
-			margin: 10,
-    	nav: true,
-    	navText: ['<span>&lsaquo;</span>', '<span>&rsaquo;</span>'],
-			responsive: {
-				0: {
-					items: 1
-				},
+		if(typeof($(window).owlCarousel) !== 'undefined') {
+			$('.carousel').owlCarousel({
+				loop: true,
+				margin: 10,
+	    	nav: true,
+	    	navText: ['<span>&lsaquo;</span>', '<span>&rsaquo;</span>'],
+	    	autoplay: true,
+	    	autoplayHoverPause: true,
+				responsive: {
+					0: {
+						items: 1
+					},
 
-        480: {
-          items: 2
-        }
-    }
-    });
+	        480: {
+	          items: 2
+	        }
+	    }
+	    });
+		}
 
 		// -------------------------------------------------------------------------------------
 		// EqualHeight

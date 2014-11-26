@@ -266,42 +266,7 @@ dd.dd-margined {
 
 /* carousel
 ----------------------------------------------------------------------------------------*/
-// .carousel {
-// 	& {
-// 		position: relative;
-// 		overflow: hidden;
-// 	}
-
-// 	ul {
-// 		width: 10000px;
-// 		position: absolute;
-// 		list-style: none;
-// 		margin: 0;
-// 		padding: 0;
-// 	}
-
-// 	li {
-// 		float: left;
-// 	}
-// }
-
-// .carousel-control-prev,
-// .carousel-control-next {
-// 	position: absolute;
-// }
-
-// .carousel-control-prev {
-// 	left: 0;
-// }
-
-// .carousel-control-next {
-// 	right: 0;
-// }
-
-// .carousel-control-prev span,
-// .carousel-control-next span {
-// 	display: none;
-// }
+@import 'owlcarousel.scss';
 
 /* layout
 ----------------------------------------------------------------------------------------*/
@@ -1596,11 +1561,9 @@ dd.dd-margined {
 
 /* article-frontpage-carousel
 ----------------------------------------------------------------------------------------*/
-@import 'owlcarousel.scss';
-
 #article-frontpage-carousel {
 	.grid-inner {
-		margin: 0 60px 0 0;
+		margin: 0 50px 0 0;
 		position: relative;
 	}
 
@@ -1609,8 +1572,20 @@ dd.dd-margined {
 	}
 
 	.owl-carousel {
+		margin: 0 0 35px 0;
 		padding: 0 40px;
 		@include box-sizing(border-box);
+	}
+
+	.owl-item > li {
+		& {
+			max-width: 230px;
+			margin: 0 auto;
+		}
+
+		img {
+			margin: 0 auto;
+		}
 	}
 
 	.owl-controls {
