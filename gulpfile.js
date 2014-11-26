@@ -34,17 +34,15 @@ gulp.task('imagemin', function() {
 gulp.task('scripts', function() {
 	gulp.src(['./src/js/**/*'])
 		.pipe(plumber())
-		// .pipe(concat('script.js'))
-		.pipe(stripDebug())
 		.pipe(uglify())
 		.pipe(gulp.dest('./out/pingz/src/js/'));
 
-	// gulp.src(['./src/js/**/*.js'])
-	// 	.pipe(plumber())
-	// 	// .pipe(concat('script.js'))
-	// 	.pipe(stripDebug())
-	// 	.pipe(uglify())
-	// 	.pipe(gulp.dest('./js/'));
+	gulp.src(['./src/js/parsley-1.1.16.js', './src/js/twitterbootstrap-2.0.4.js', './src/js/pingz.functions.js'])
+		.pipe(plumber())
+		.pipe(concat('pingz.bundle.js'))
+		.pipe(stripDebug())
+		.pipe(uglify())
+		.pipe(gulp.dest('./out/pingz/src/js/'));
 });
 
 // CSS concat, auto-prefix and minify
