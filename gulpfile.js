@@ -37,7 +37,7 @@ gulp.task('scripts', function() {
 		.pipe(uglify())
 		.pipe(gulp.dest('./out/pingz/src/js/'));
 
-	gulp.src(['./src/js/jquery-ui-1.10.3.min.js', './src/js/twitterbootstrap-2.0.4.js', './src/js/parsley-1.1.16.js', './src/js/pingz.functions.js'])
+	gulp.src(['./src/js/jquery-ui-1.10.3.min.js', './src/js/twitterbootstrap-2.0.4.js', './src/js/i18n/messages.de.js', './src/js/parsley-1.1.16.js', './src/js/lazyload-1.9.1.js', './src/js/pingz.functions.js'])
 		.pipe(plumber())
 		.pipe(concat('pingz.bundle.js'))
 		.pipe(stripDebug())

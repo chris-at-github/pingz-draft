@@ -105,7 +105,7 @@
 		// -------------------------------------------------------------------------------------
 		// OwlCarousel
 		if(typeof($(window).owlCarousel) !== 'undefined') {
-			$('.carousel').owlCarousel({
+			$('.carousel ul').owlCarousel({
 				loop: true,
 				margin: 10,
 	    	nav: true,
