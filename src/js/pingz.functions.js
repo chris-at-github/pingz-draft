@@ -112,6 +112,7 @@
 	    	navText: ['<span>&lsaquo;</span>', '<span>&rsaquo;</span>'],
 	    	autoplay: true,
 	    	autoplayHoverPause: true,
+	    	smartSpeed: 300,
 				responsive: {
 					0: {
 						items: 1
