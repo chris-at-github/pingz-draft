@@ -3,8 +3,7 @@
 @media only screen and (max-width: 1060px) {
 	#page {
 		width: auto;
-		margin: 0;
-		border: 10px solid $white;
+		margin: 10px;
 		overflow: hidden;
 	}
 
@@ -22,5 +21,26 @@
 
 	#footer-sitemap a, #footer-sitemap span, #footer-sitemap strong {
 		@include hyphens();
+	}
+}
+
+/* width 768px
+----------------------------------------------------------------------------------------*/
+@media only screen and (max-width: 768px) {
+	#body-header {
+		& {
+			margin: 0 0 35px 0;
+			padding: 0;
+		}
+
+		#body-header-inner {
+			margin: 0;
+		}
+	}
+
+	#body-sidebar, #body-inner {
+		left: 0;
+	  width: auto;
+	  float: none;
 	}
 }
