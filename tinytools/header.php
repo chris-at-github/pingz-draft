@@ -175,20 +175,19 @@
 		<div id="body">
 			<?php if($_T_CONFIG['section']['bodyheader'] === true) { ?>
 				<header id="body-header">
-					<?php if($_T_CONFIG['section']['breadcrumb'] === true) { ?>
-						<div id="breadcrumb" class="clearfix">
-							<div id="breadcrumb-title">Sie sind hier:</div>
-							<?php echo $menu->renderBreadcrumb(); ?>
-						</div>
-					<?php } ?>
-					<h1 <?php if(isset($_T_SCHEMA['type']) === true) { echo 'itemprop="name"'; } ?>><?php echo $_T_HEADER; ?></h1>
+					<div id="body-header-inner">
+						<?php if($_T_CONFIG['section']['breadcrumb'] === true) { ?>
+							<div id="breadcrumb" class="clearfix">
+								<div id="breadcrumb-title">Sie sind hier:</div>
+								<?php echo $menu->renderBreadcrumb(); ?>
+							</div>
+						<?php } ?>
+						<h1 <?php if(isset($_T_SCHEMA['type']) === true) { echo 'itemprop="name"'; } ?>><?php echo $_T_HEADER; ?></h1>
+					</div>
 				</header>
 			<?php } ?>
 
 			<?php if($_T_CONFIG['widescreen'] === false) { ?>
-				<div class="clearfix">
-					<div id="body-sidebar" class="sidebar">
-						<?php echo $widget->render('sidebar'); ?><br />
-					</div>
-					<div id="body-inner">
+				<div class="fluid-grid">
+					<div id="body-inner" class="grid">
 			<?php } ?>

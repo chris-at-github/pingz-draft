@@ -1,5 +1,8 @@
 			<?php if($_T_CONFIG['widescreen'] === false) { ?>
 					</div>
+					<div id="body-sidebar" class="grid sidebar">
+						<?php echo $widget->render('sidebar'); ?><br />
+					</div>
 				</div>
 			<?php } ?>
 		</div>

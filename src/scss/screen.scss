@@ -287,22 +287,24 @@ dd.dd-margined {
 }
 
 #body-sidebar {
-	float: left;
-  width: 18%;
-  *width: 17.875%;
+	left: -77.5%;
+  width: 22.5%;
 }
 
 #body-inner {
-	float: left;
-  width: 76.75%;
-  *width: 76.625%;
-  margin-left: 5.25%;
-  *margin-left: 5.125%;
+	left: 22.5%;
+  width: 77.5%;
 }
 
 #body-header {
 	& {
-		margin: 0 0 35px 23.25%;
+		margin: 0 -15px 35px -15px;
+		padding: 0 0 0 15px;
+		border: 0;
+	}
+
+	#body-header-inner {
+		margin: 0 0 0 22.5%;
 		border: 0;
 	}
 
