@@ -1,0 +1,26 @@
+/* width 1060px
+----------------------------------------------------------------------------------------*/
+@media only screen and (max-width: 1060px) {
+	#page {
+		width: auto;
+		margin: 0;
+		border: 10px solid $white;
+		overflow: hidden;
+	}
+
+	#article-filter-material li.new-line {
+		clear: none;
+	}
+}
+
+/* width 980px
+----------------------------------------------------------------------------------------*/
+@media only screen and (max-width: 980px) {
+	#{$h1}, #{$h2}, #{$h3} {
+		@include hyphens();
+	}
+
+	#footer-sitemap a, #footer-sitemap span, #footer-sitemap strong {
+		@include hyphens();
+	}
+}

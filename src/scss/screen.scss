@@ -2048,20 +2048,9 @@ td.checkout-article-title {
 	}
 }
 
-/* width 1024px
+/* responsive
 ----------------------------------------------------------------------------------------*/
-@media only screen and (max-width: 1060px) {
-	#page {
-		width: auto;
-		margin: 0;
-		border: 10px solid $white;
-		overflow: hidden;
-	}
-
-	#article-filter-material li.new-line {
-		clear: none;
-	}
-}
+@import '_responsive.scss';
 
 /* print
 ----------------------------------------------------------------------------------------*/
