@@ -43,6 +43,9 @@ $_T_CONFIG_DEFAULT = array(
 |-------------------------------------------------------------------------------
 */
 $_T_MENU['mainmenu'] = array(
+	'/' => array(
+		'title'			=> 'Startseite'
+	),
 	'/dinkelkissen/' => array(
 		'title'			=> 'Dinkelkissen',
 		'children'	=> array(
@@ -64,11 +67,11 @@ $_T_MENU['mainmenu'] = array(
 			)
 		)
 	),
-	'/ueber-uns/' => array(
-		'title'			=> 'Über uns'
+	'/konfigurator/' => array(
+		'title'			=> 'Konfigurator'
 	),
-	'/kontakt/' => array(
-		'title'			=> 'Kontakt'
+	'/blog/' => array(
+		'title'			=> 'Blog'
 	)
 );
 
