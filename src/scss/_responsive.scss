@@ -88,7 +88,7 @@
 /* width 520px
 ----------------------------------------------------------------------------------------*/
 @media only screen and (max-width: 520px) {
-	.grid-break-tablet {
+	.grid-break-smartphone {
 		@include clear-column();
 	}
-	}
+}

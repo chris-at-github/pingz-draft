@@ -22,7 +22,8 @@
 											->setData($_T_MENU['footerSitemap'])
 											->setOptions(array(
 												'expandActive'	=> false,
-												'ulHtmlClass'		=> 'fluid-grid'
+												'ulHtmlClass'		=> 'fluid-grid grid-break-smartphone',
+												'liHtmlClass'		=> 'grid grid-33'
 											))
 											->render();
 									?>
