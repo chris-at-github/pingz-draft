@@ -133,7 +133,7 @@
 	right: percentage($column / $grid-columns);
 }
 
-@mixin clear-column {
+@mixin clear-column() {
 	&.fluid-grid {
 		margin-left: 0;
 		margin-right: 0;
@@ -142,6 +142,7 @@
 	.grid {
 		width: auto;
 		float: none;
+		margin-bottom: 15px;
 		padding-left: 0;
 		padding-right: 0;
 	}
