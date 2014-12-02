@@ -27,6 +27,10 @@
 /* width 768px
 ----------------------------------------------------------------------------------------*/
 @media only screen and (max-width: 768px) {
+	.grid-break-tablet {
+		@include clear-column();
+	}
+
 	#body-header {
 		& {
 			margin: 0 0 35px 0;
