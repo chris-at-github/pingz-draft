@@ -33,7 +33,7 @@ class tMenu {
 	 * @var string $_config
 	 * @access private
 	 */
-	private $config = null;	
+	private $config = null;
 
 	/**
 	 * aktiver Pfad
@@ -184,7 +184,7 @@ class tMenu {
 
 		return $this;
 	}
-	
+
 	/**
 	 * liefert den Title des aktiven Elements
 	 *
@@ -194,13 +194,13 @@ class tMenu {
 	public function getActiveTitle() {
 		$title 	= array();
 		$ret		= null;
-		
+
 		if(empty($this->_breadcrumb) === false) {
 			$ret = $this->_breadcrumb[$this->_active]['title'];
 		}
-		
-		return $ret;		
-	}	
+
+		return $ret;
+	}
 
 	/**
 	 * baut den HTML-Code zusammen und gibt ihn zurueck
@@ -222,7 +222,7 @@ class tMenu {
 		if($r >= $this->_options['minDepth']) {
 			$minDepthEnabled = true;
 		}
-		
+
 		$i = 0;
 		$n = count($data);
 
@@ -232,12 +232,25 @@ class tMenu {
 			if($item['menu'] !== false) {
 
 				if($minDepthEnabled === true) {
-					$liHtmlClass = '';
-					if($i === 1 && $this->_options['setFirstChild'] === true) {
-						$liHtmlClass = ' class="first-child"';
+					$liHtmlClass = array();
+
+					if($this->_options['liHtmlClass'] !== null && $r === 1) {
+						$liHtmlClass[] = $this->_options['liHtmlClass'];
 					}
+
+					if($i === 1 && $this->_options['setFirstChild'] === true) {
+						$liHtmlClass[] = 'first-child';
+					}
+
 					if($i === $n) {
-						$liHtmlClass = ' class="last-child"';
+						$liHtmlClass[] = 'last-child';
+					}
+
+					if(empty($liHtmlClass) === false) {
+						$liHtmlClass = ' class="' . implode(' ', $liHtmlClass) . '"';
+
+					} else {
+						$liHtmlClass = '';
 					}
 
 					$aHtmlClass = '';
@@ -255,7 +268,7 @@ class tMenu {
 						$this->_options['expandActive'] === false
 					)
 				) {
-					$children = $this->render($item['children'], null, ++$r);
+					$children = $this->render($item['children'], null, ($r + 1));
 				}
 
 				if($minDepthEnabled === true) {
@@ -268,7 +281,7 @@ class tMenu {
 
 		if($this->_options['renderUlTag'] === true && $minDepthEnabled === true && empty($html) === false) {
 			$ulHtmlClass = '';
-			if($this->_options['ulHtmlClass'] !== null) {
+			if($this->_options['ulHtmlClass'] !== null && $r === 1) {
 				$ulHtmlClass = ' class="' . $this->_options['ulHtmlClass'] . '"';
 			}
 
