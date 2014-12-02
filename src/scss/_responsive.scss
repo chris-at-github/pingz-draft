@@ -48,6 +48,28 @@
 	  float: none;
 	}
 
+	#footer-container {
+		& {
+			padding: 15px;
+		}
+
+		.background {
+			display: none;
+		}
+
+		#footer-sitemap {
+			padding: 0;
+		}
+
+		#newsletter {
+			padding: 0 0 15px 0;
+		}
+
+		#social-links {
+			padding: 0;
+		}
+	}
+
 	#frontpage-container {
 		.background {
 			display: none;
@@ -62,3 +84,11 @@
 		}
 	}
 }
+
+/* width 520px
+----------------------------------------------------------------------------------------*/
+@media only screen and (max-width: 520px) {
+	.grid-break-tablet {
+		@include clear-column();
+	}
+	}

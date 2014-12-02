@@ -12,7 +12,7 @@
 				<div id="footer-container">
 					<div class="background"></div>
 
-					<div class="fluid-grid">
+					<div class="fluid-grid grid-break-tablet">
 						<div class="grid grid-66">
 							<div class="grid-inner">
 								<nav id="footer-sitemap" class="clearfix">
@@ -21,7 +21,8 @@
 											->reset()
 											->setData($_T_MENU['footerSitemap'])
 											->setOptions(array(
-												'expandActive'	=> false
+												'expandActive'	=> false,
+												'ulHtmlClass'		=> 'fluid-grid'
 											))
 											->render();
 									?>
