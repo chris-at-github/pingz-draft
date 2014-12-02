@@ -47,4 +47,18 @@
 	  width: auto;
 	  float: none;
 	}
+
+	#frontpage-container {
+		.background {
+			display: none;
+		}
+
+		#article-frontpage-carousel .grid-inner {
+			margin: 0;
+		}
+
+		#frontpage-faq .grid-inner {
+			padding: 0;
+		}
+	}
 }
