@@ -27,6 +27,18 @@
 /* width 768px
 ----------------------------------------------------------------------------------------*/
 @media only screen and (max-width: 768px) {
+	#page {
+		margin: 0;
+	}
+
+	#body {
+		margin: 0 10px;
+	}
+
+	#teaser {
+		margin: 0 -10px 20px -10px;
+	}
+
 	.grid-break-tablet {
 		@include clear-column();
 	}
@@ -68,6 +80,10 @@
 		#social-links {
 			padding: 0;
 		}
+	}
+
+	#footer-final {
+		padding: 15px;
 	}
 
 	#frontpage-container {
