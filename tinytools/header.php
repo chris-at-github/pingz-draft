@@ -147,13 +147,14 @@
 						?>
 					</ul>
 				</nav>
-				<nav id="mainmenu" class="clearfix">
+				<nav id="mainmenu">
 					<?php
 						echo $menu
 							->reset()
 							->setData($_T_MENU['mainmenu'])
 							->setOptions(array(
-								'maxDepth'	=> 1
+								'maxDepth'		=> 1,
+								'ulHtmlClass'	=> 'clearfix'
 							))
 							->render();
 					?>

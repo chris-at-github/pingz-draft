@@ -31,6 +31,42 @@
 		margin: 0;
 	}
 
+	#headmenu {
+		top: 0; right: 10px;
+		font-size: 12px;
+	}
+
+	#logo a {
+		float: none;
+		display: inline-block;
+	}
+
+	#mainmenu {
+		& {
+			padding: 10px 0 0 10px;
+		}
+
+		li {
+			&:first-child {
+				& {
+					margin-left: 0;
+				}
+
+				a {
+					padding: 4px 8px 0 0;
+				}
+			}
+
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+	}
+
+	#basket {
+		top: 40px; bottom: auto;
+	}
+
 	#body {
 		margin: 0 10px;
 	}
@@ -70,7 +106,13 @@
 		}
 
 		#footer-sitemap {
-			padding: 0;
+			& {
+				padding: 0;
+			}
+
+			li li a {
+				font-size: 12px;
+			}
 		}
 
 		#newsletter {
@@ -84,6 +126,7 @@
 
 	#footer-final {
 		padding: 15px;
+		font-size: 12px;
 	}
 
 	#frontpage-container {
