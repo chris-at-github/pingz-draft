@@ -168,7 +168,7 @@
 
 					<a id="basket-trigger" href="/warenkorb">
 						<span id="basket-title">Ihr Warenkorb</span>
-						<span id="basket-status"><span id="basket-status-products">2 Produkte</span><span id="basket-status-price">34,98 €</span></span>
+						<span id="basket-status"><span id="basket-status-products">2 <span id="basket-status-products-label">Produkte</span></span><span id="basket-status-price">34,98 €</span></span>
 					</a>
 				</div>
 			</header>
