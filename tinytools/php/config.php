@@ -33,7 +33,8 @@ $_T_CONFIG_DEFAULT = array(
 
 	'script'	=> array(
 		'/out/pingz/src/js/i18n/messages.de.js',
-		'/out/pingz/src/js/parsley-1.1.16.js'
+		'/out/pingz/src/js/parsley-1.1.16.js',
+		'/out/pingz/src/js/responsive-nav.js'
 	)
 );
 

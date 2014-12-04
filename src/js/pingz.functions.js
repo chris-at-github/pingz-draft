@@ -134,6 +134,11 @@
 		});
 
 		// -------------------------------------------------------------------------------------
+		// ResponsiveNav
+		var navigation = responsiveNav(".nav-collapse", {
+		});
+
+		// -------------------------------------------------------------------------------------
 		// Lazy Load fuer Artikelbilder
 		if(typeof($(window).lazyload) !== 'undefined') {
 			$('.lazy-load').lazyload();

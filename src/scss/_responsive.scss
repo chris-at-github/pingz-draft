@@ -31,6 +31,10 @@
 		margin: 0;
 	}
 
+	#header {
+		padding: 40px 10px 10px 10px;
+	}
+
 	#headmenu {
 		top: 0; right: 10px;
 		font-size: 12px;
@@ -43,7 +47,7 @@
 
 	#mainmenu {
 		& {
-			padding: 10px 0 0 10px;
+			padding: 10px 0 0 0;
 		}
 
 		li {
@@ -65,6 +69,7 @@
 
 	#basket {
 		top: 40px; bottom: auto;
+		right: 10px;
 	}
 
 	#body {
@@ -150,4 +155,65 @@
 	.grid-break-smartphone {
 		@include clear-column();
 	}
+
+	#header {
+		padding: 0;
+	}
+
+	#headmenu {
+		display: none;
+	}
+
+	#mainmenu {
+		li {
+			float: none;
+			margin: 0;
+			border: 0;
+			border-bottom: 1px solid $grey-lighter;
+		}
+
+		a, li:first-child a {
+			padding: 12px 10px;
+		}
+	}
+}
+
+
+.js .nav-collapse {
+  clip: rect(0 0 0 0);
+  max-height: 0;
+  position: absolute;
+  display: block;
+  overflow: hidden;
+  zoom: 1;
+}
+
+.nav-collapse.opened {
+  max-height: 9999px;
+}
+
+.disable-pointer-events {
+  pointer-events: none !important;
+}
+
+.nav-toggle {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+@media screen and (min-width: 520px) {
+  .js .nav-collapse {
+    position: relative;
+  }
+  .js .nav-collapse.closed {
+    max-height: none;
+  }
+  .nav-toggle {
+    display: none;
+  }
 }
