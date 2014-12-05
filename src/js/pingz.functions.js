@@ -136,6 +136,12 @@
 		// -------------------------------------------------------------------------------------
 		// ResponsiveNav
 		var navigation = responsiveNav(".nav-collapse", {
+			label: '<span class="nav-toggle-icon lines-button x"><span class="nav-toggle-icon-lines lines"></span></span>'
+		});
+
+
+		$('.nav-toggle').on('click touch', function() {
+			$(this).find('.nav-toggle-icon').toggleClass('close');
 		});
 
 		// -------------------------------------------------------------------------------------

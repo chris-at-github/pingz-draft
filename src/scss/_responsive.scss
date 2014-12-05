@@ -157,7 +157,7 @@
 	}
 
 	#header {
-		padding: 0;
+		padding: 5px 0;
 		background: $pink;
 	}
 
@@ -170,6 +170,10 @@
 	}
 
 	#mainmenu {
+		& {
+			padding: 5px 0 0 0;
+		}
+
 		li {
 			float: none;
 			margin: 0;
@@ -184,7 +188,7 @@
 
 	#basket {
 		& {
-			top: 0; right: 0;
+			top: 5px; right: 55px;
 			width: 51px;
 		}
 
@@ -228,6 +232,11 @@
 }
 
 .nav-toggle {
+	position: absolute;
+	top: 5px; right: 0;
+	width: 51px;
+	height: 51px;
+
   -webkit-tap-highlight-color: rgba(0,0,0,0);
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -246,5 +255,82 @@
   }
   .nav-toggle {
     display: none;
+  }
+}
+
+
+
+.nav-toggle-icon {
+	position: absolute;
+	top: 0; left: 6px;
+}
+
+
+.lines-button {
+  padding: $nav-toggle-icon-size / 2 $nav-toggle-icon-size / 4;
+  transition: .3s;
+  cursor: pointer;
+  user-select: none;
+  border-radius: $nav-toggle-icon-size / 7;
+
+  &:hover {
+    opacity: 1;
+  }
+  &:active {
+    transition: 0;
+  }
+}
+
+@mixin line {
+  display: inline-block;
+  width: $nav-toggle-icon-size;
+  height: $nav-toggle-icon-size / 9;
+  background: $white;
+  transition: 0.3s;
+}
+
+.lines {
+  @include line;
+  position: relative;
+
+  &:before, &:after {
+   @include line;
+    position: absolute;
+    left:0;
+    content: '';
+    -webkit-transform-origin: $nav-toggle-icon-size /14 center;
+            transform-origin: $nav-toggle-icon-size /14 center;
+  }
+  &:before {
+    top: $nav-toggle-icon-size /4;
+  }
+  &:after {
+    top: -$nav-toggle-icon-size /4;
+  }
+}
+
+.lines-button.close {
+  -webkit-transform: scale3d(.8,.8,.8);
+          transform: scale3d(.8,.8,.8);
+}
+
+//three-lines to x
+.lines-button.x.close{
+  .lines {
+    background: transparent;
+    &:before, &:after{
+      -webkit-transform-origin: 50% 50%;
+              transform-origin: 50% 50%;
+      top:0;
+      width: $nav-toggle-icon-size;
+    }
+    &:before{
+      -webkit-transform: rotate3d(0,0,1,45deg);
+              transform: rotate3d(0,0,1,45deg);
+    }
+    &:after{
+      -webkit-transform: rotate3d(0,0,1,-45deg);
+              transform: rotate3d(0,0,1,-45deg);
+    }
   }
 }
