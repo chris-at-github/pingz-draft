@@ -463,6 +463,118 @@ dd.dd-margined {
 	}
 }
 
+.js .nav-collapse {
+  clip: rect(0 0 0 0);
+  max-height: 0;
+  position: absolute;
+  display: block;
+  overflow: hidden;
+  zoom: 1;
+}
+
+.nav-collapse.opened {
+  max-height: 9999px;
+}
+
+.disable-pointer-events {
+  pointer-events: none !important;
+}
+
+.nav-toggle {
+	& {
+		position: absolute;
+		top: 5px; right: 0;
+		width: 51px;
+		height: 51px;
+
+	  -webkit-tap-highlight-color: rgba(0,0,0,0);
+	  -webkit-touch-callout: none;
+	  -webkit-user-select: none;
+	  -moz-user-select: none;
+	  -ms-user-select: none;
+	  -o-user-select: none;
+	  user-select: none;
+	}
+
+	&:hover {
+		background: $darkpink;
+	}
+
+	.nav-toggle-icon {
+		& {
+			position: absolute;
+			top: 0; left: 6px;
+		  padding: $nav-icon-size / 2 $nav-icon-size / 4;
+		  transition: .3s;
+		  cursor: pointer;
+		  user-select: none;
+		  border-radius: $nav-icon-size / 7;
+		}
+
+	  &:hover {
+	    opacity: 1;
+	  }
+
+	  &:active {
+	    transition: 0;
+	  }
+	}
+}
+
+.lines {
+	& {
+	  @include nav-icon-line($nav-icon-size);
+	  position: relative;
+	}
+
+  &:before, &:after {
+  	content: '';
+   	@include nav-icon-line($nav-icon-size);
+    position: absolute;
+    left: 0;
+    -webkit-transform-origin: $nav-icon-size / 14 center;
+            transform-origin: $nav-icon-size / 14 center;
+  }
+
+  &:before {
+    top: $nav-icon-size / 4;
+  }
+
+  &:after {
+    top: -$nav-icon-size / 4;
+  }
+}
+
+.js-nav-active .nav-toggle-icon {
+	& {
+	  -webkit-transform: scale3d(.8,.8,.8);
+	          transform: scale3d(.8,.8,.8);
+	}
+
+  .lines {
+  	& {
+  		background: transparent;
+  	}
+
+    &:before, &:after {
+    	top:0;
+      -webkit-transform-origin: 50% 50%;
+              transform-origin: 50% 50%;
+      width: $nav-icon-size;
+    }
+
+    &:before{
+      -webkit-transform: rotate3d(0, 0 ,1, 45deg);
+              transform: rotate3d(0, 0, 1, 45deg);
+    }
+
+    &:after{
+      -webkit-transform: rotate3d(0, 0, 1, -45deg);
+              transform: rotate3d(0, 0, 1, -45deg);
+    }
+  }
+}
+
 /* breadcrumb
 ----------------------------------------------------------------------------------------*/
 #breadcrumb {
