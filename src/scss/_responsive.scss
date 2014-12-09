@@ -81,9 +81,17 @@
 			margin: 0 -10px 20px -10px;
 		}
 
+		li {
+			background-size: cover;
+		}
+
 		.teaser-inner {
 			position: relative;
 			bottom: auto; right: auto;
+			margin: 20px;
+			padding: 0 0 100px 0;
+			text-align: left;
+			@include box-sizing(border-box);
 		}
 	}
 

@@ -1151,7 +1151,7 @@ dd.dd-margined {
 	li {
 		position: relative;
 		width: 100%;
-		height: 285px;
+		min-height: 285px;
 		float: left;
 		color: #fff;
 		text-align: right;
