@@ -1210,9 +1210,24 @@ dd.dd-margined {
 }
 
 .article-grid {
+	.fluid-grid {
+		margin-left: -10px;
+		margin-right: -10px;
+	}
+
+	.fluid-grid[data-columns]::before {
+		content: '3 .grid.grid-33';
+	}
+
+	.grid {
+		padding-left: 10px;
+		padding-right: 10px;
+		overflow: hidden;
+	}
+
 	.grid-inner {
 		position: relative;
-		margin-bottom: 25px;
+		margin-bottom: 20px;
 		padding: 17px;
 		border: 3px solid $grey-light;
 		background: $white;
@@ -1223,8 +1238,8 @@ dd.dd-margined {
 		border: 3px solid $grey-lighter;
 	}
 
-	.fluid-grid:last-child .grid-inner {
-		margin-bottom: 0;
+	.grid .grid-inner:last-child {
+		margin: 0;
 	}
 
 /*

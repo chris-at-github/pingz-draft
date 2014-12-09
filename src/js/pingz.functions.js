@@ -136,13 +136,22 @@
 		// -------------------------------------------------------------------------------------
 		// ResponsiveNav
 		var navigation = responsiveNav(".nav-collapse", {
-			label: '<span class="nav-toggle-icon lines-button x"><span class="nav-toggle-icon-lines lines"></span></span>'
+			label: '<span class="nav-toggle-icon"><span class="nav-toggle-icon-lines lines"></span></span>'
 		});
 
 		// -------------------------------------------------------------------------------------
 		// Lazy Load fuer Artikelbilder
 		if(typeof($(window).lazyload) !== 'undefined') {
-			$('.lazy-load').lazyload();
+			$('.lazy-load').lazyload({
+	    	event: 'lazy',
+	    	effect: 'fadeIn'
+	    });
+
+			$(window).bind('load', function() {
+		    var timeout = setTimeout(function() {
+		      $('.lazy-load').trigger('lazy');
+		    }, 0);
+			});
 		}
 
 		// -------------------------------------------------------------------------------------
