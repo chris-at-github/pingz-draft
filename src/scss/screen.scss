@@ -314,8 +314,17 @@ dd.dd-margined {
 	}
 }
 
-.widescreen #body-header {
-	margin: 0 0 35px 0;
+.widescreen {
+	#body-header {
+		& {
+			margin: 0 0 35px 0;
+			padding: 0;
+		}
+
+		#body-header-inner {
+			margin: 0;
+		}
+	}
 }
 
 /* logo
@@ -1817,6 +1826,13 @@ dd.dd-margined {
 		float: left;
 		color: $grey;
 		line-height: 20px;
+		@include box-sizing(border-box);
+	}
+
+	dfn {
+		display: block;
+		margin: 0 0 0 25px;
+		font-style: normal;
 	}
 
 	.identifier {
@@ -1950,6 +1966,7 @@ td.checkout-article-title {
 
 #checkout-article-actions {
 	float: left;
+	margin: 0 0 20px 0;
 }
 
 #checkout-article-actions {
