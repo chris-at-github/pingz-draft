@@ -5,7 +5,7 @@
 		'css'					=> array(),
 		'widescreen'	=> true
 	);
-	
+
 	$_T_WIDGET_LOCAL = array(
 		'steps'	=> '/widget/user-steps.html'
 	);
@@ -16,18 +16,18 @@
 	<?php echo $widget->render('steps'); ?>
 
 	<?php if(true === true) { ?>
-		<div id="user-addresses-grid-1" class="fluid-grid equalheight-grid user-addresses-grid">
+		<div id="user-addresses-grid-1" class="fluid-grid equalheight-grid user-addresses-grid grid-break-tablet">
 			<div class="grid grid-33">
 				<div class="grid-inner">
 					<header class="h2">Bestellen ohne Registrierung</header>
 					<p>Ich möchte kein Kundenkonto eröffnen.</p>
-					
+
 						<div class="form-actions">
 							<input type="submit" value="Weiter" class="button button-submit" />
-						</div>				
+						</div>
 				</div>
 			</div>
-			
+
 			<div class="grid grid-33">
 				<div class="grid-inner">
 					<header class="h2">Persönliches Kundenkonto eröffnen</header>
@@ -37,10 +37,10 @@
 					<form action="/konto/anmeldung" method="post">
 						<div class="form-actions">
 							<input type="submit" value="Konto erstellen" class="button button-submit" />
-						</div>				
+						</div>
 					</form>
 				</div>
-			</div>	
+			</div>
 
 			<div class="grid grid-33">
 				<div class="grid-inner">
@@ -56,22 +56,22 @@
 						<div class="form-item">
 							<div class="form-label"><label for="user-login-password">Passwort:</label></div>
 							<div class="form-field"><input type="password" id="user-login-password" value="" /></div>
-						</div>	
+						</div>
 						<div class="form-actions">
 							<input type="submit" value="Anmelden" class="button button-submit" />
 						</div>
 					</form>
 				</div>
-			</div>	
+			</div>
 		</div>
 
 		<hr />
-	
+
 		<div id="user-addresses-grid-2" class="fluid-grid user-addresses-grid">
 			<div class="grid grid-50">
 				<div class="grid-inner">
 					<header class="h2">Rechnungsadresse</header>
-					
+
 					<div id="user-billingaddress-properties">
 						<address>
 							<dl>
@@ -83,7 +83,7 @@
 									datamints GmbH<br />
 									Parkhofweg 8<br />
 									82377 Penzberg<br />
-									Deutschland							
+									Deutschland
 								</dd>
 
 								<dt>E-Mail:</dt>
@@ -93,12 +93,12 @@
 								<dd>08856 / 123 456 - 789</dd>
 							</dl>
 						</address>
-						
+
 						<div class="form-actions">
 							<button class="button button-submit" id="user-billingaddress-properties-edit">Bearbeiten</button>
 						</div>
 					</div>
-					
+
 					<div id="user-billingaddress-form" class="form-grid hide">
 						<div class="form-item">
 							<div class="form-label"><label for="user-billing-address-fame">Anrede:</label></div>
@@ -110,67 +110,67 @@
 								</select>
 							</div>
 						</div>
-						
-						<div class="form-item">
-							<div class="form-label"><label for="user-billing-address-fame">Nachname:</label></div>
-							<div class="form-field"><input type="text" value="" id="user-billing-address-fame" /></div>
-						</div>	
 
 						<div class="form-item">
 							<div class="form-label"><label for="user-billing-address-fame">Nachname:</label></div>
 							<div class="form-field"><input type="text" value="" id="user-billing-address-fame" /></div>
-						</div>	
+						</div>
+
+						<div class="form-item">
+							<div class="form-label"><label for="user-billing-address-fame">Nachname:</label></div>
+							<div class="form-field"><input type="text" value="" id="user-billing-address-fame" /></div>
+						</div>
 
 						<div class="form-item">
 							<div class="form-label"><label for="user-billing-address-fame">Adresszusatz:</label></div>
 							<div class="form-field"><input type="text" value="" id="user-billing-address-fame" /></div>
-						</div>	
+						</div>
 
 						<div class="fluid-grid">
 							<div class="grid grid-75">
 								<div class="form-item grid-inner">
 									<div class="form-label"><label for="user-billing-address-fame">Straße:</label></div>
 									<div class="form-field"><input type="text" value="" id="user-billing-address-fame" /></div>
-								</div>	
+								</div>
 							</div>
-							
+
 							<div class="grid grid-25">
 								<div class="form-item grid-inner">
 									<div class="form-label"><label for="user-billing-address-fame">Hausnummer:</label></div>
 									<div class="form-field"><input type="text" value="" id="user-billing-address-fame" /></div>
-								</div>		
+								</div>
 							</div>
 						</div>
-						
+
 						<div class="fluid-grid">
 							<div class="grid grid-25">
 								<div class="form-item grid-inner">
 									<div class="form-label"><label for="user-billing-address-fame">Postleitzahl:</label></div>
 									<div class="form-field"><input type="text" value="" id="user-billing-address-fame" /></div>
-								</div>	
+								</div>
 							</div>
-							
+
 							<div class="grid grid-75">
 								<div class="form-item grid-inner">
 									<div class="form-label"><label for="user-billing-address-fame">Stadt:</label></div>
 									<div class="form-field"><input type="text" value="" id="user-billing-address-fame" /></div>
-								</div>		
+								</div>
 							</div>
 						</div>
 
 						<div class="form-item">
 							<div class="form-label"><label for="user-billing-address-fame">E-Mailadresse:</label></div>
 							<div class="form-field"><input type="text" value="" id="user-billing-address-fame" /></div>
-						</div>	
+						</div>
 
 						<div class="form-item">
 							<div class="form-label"><label for="user-billing-address-fame">Telefonnummer für Rückfragen:</label></div>
 							<div class="form-field"><input type="text" value="" id="user-billing-address-fame" /></div>
-						</div>	
+						</div>
 					</div>
 				</div>
 			</div>
-			
+
 			<div class="grid grid-50">
 				<div class="grid-inner">
 					<div id="user-display-shippingaddress-form-item" class="form-item form-checkbox clearfix">
@@ -192,7 +192,7 @@
 							</div>
 						</div>
 					</header>
-					
+
 					<div id="user-shippingaddress-form" class="form-grid">
 						<div class="form-item">
 							<div class="form-label"><label for="user-shippingaddress-fame">Anrede:</label></div>
@@ -204,87 +204,87 @@
 								</select>
 							</div>
 						</div>
-						
-						<div class="form-item">
-							<div class="form-label"><label for="user-shippingaddress-fame">Nachname:</label></div>
-							<div class="form-field"><input type="text" value="" id="user-shippingaddress-fame" /></div>
-						</div>	
 
 						<div class="form-item">
 							<div class="form-label"><label for="user-shippingaddress-fame">Nachname:</label></div>
 							<div class="form-field"><input type="text" value="" id="user-shippingaddress-fame" /></div>
-						</div>	
+						</div>
+
+						<div class="form-item">
+							<div class="form-label"><label for="user-shippingaddress-fame">Nachname:</label></div>
+							<div class="form-field"><input type="text" value="" id="user-shippingaddress-fame" /></div>
+						</div>
 
 						<div class="form-item">
 							<div class="form-label"><label for="user-shippingaddress-fame">Adresszusatz:</label></div>
 							<div class="form-field"><input type="text" value="" id="user-shippingaddress-fame" /></div>
-						</div>	
+						</div>
 
 						<div class="fluid-grid">
 							<div class="grid grid-75">
 								<div class="form-item grid-inner">
 									<div class="form-label"><label for="user-shippingaddress-fame">Straße:</label></div>
 									<div class="form-field"><input type="text" value="" id="user-shippingaddress-fame" /></div>
-								</div>	
+								</div>
 							</div>
-							
+
 							<div class="grid grid-25">
 								<div class="form-item grid-inner">
 									<div class="form-label"><label for="user-shippingaddress-fame">Hausnummer:</label></div>
 									<div class="form-field"><input type="text" value="" id="user-shippingaddress-fame" /></div>
-								</div>		
+								</div>
 							</div>
 						</div>
-						
+
 						<div class="fluid-grid">
 							<div class="grid grid-25">
 								<div class="form-item grid-inner">
 									<div class="form-label"><label for="user-shippingaddress-fame">Postleitzahl:</label></div>
 									<div class="form-field"><input type="text" value="" id="user-shippingaddress-fame" /></div>
-								</div>	
+								</div>
 							</div>
-							
+
 							<div class="grid grid-75">
 								<div class="form-item grid-inner">
 									<div class="form-label"><label for="user-shippingaddress-fame">Stadt:</label></div>
 									<div class="form-field"><input type="text" value="" id="user-shippingaddress-fame" /></div>
-								</div>		
+								</div>
 							</div>
 						</div>
 
 						<div class="form-item">
 							<div class="form-label"><label for="user-shippingaddress-fame">E-Mailadresse:</label></div>
 							<div class="form-field"><input type="text" value="" id="user-shippingaddress-fame" /></div>
-						</div>	
+						</div>
 
 						<div class="form-item">
 							<div class="form-label"><label for="user-shippingaddress-fame">Telefonnummer für Rückfragen:</label></div>
 							<div class="form-field"><input type="text" value="" id="user-shippingaddress-fame" /></div>
-						</div>	
+						</div>
 					</div>
-					
+
 					<div class="form-actions">
 						<button class="button button-submit">An diese Adresse versenden</button>
-					</div>					
+					</div>
 				</div>
-				
+
 				<div class="grid-inner">
 					<div class="form-item form-checkbox clearfix">
 						<div class="form-field">
 							<input type="hidden" name="blnewssubscribed" value="0">
-							<input id="user-newsletter-subscribe" type="checkbox" name="blnewssubscribed" value="1">		
+							<input id="user-newsletter-subscribe" type="checkbox" name="blnewssubscribed" value="1">
 						</div>
 						<div class="form-label">
 							<label for="user-newsletter-subscribe">Newsletter abonnieren:</label>
 							<p class="text-small text-inline">Sie können den Newsletter jederzeit kostenlos abbestellen.</p>
 						</div>
 					</div>
-				</div>				
-			</div>			
+				</div>
+			</div>
 		</div>
-	
+
 	<?php } ?>
-		
+
 	<form action="/warenkorb/3/" method="post">
 		<div class="form-actions checkout-form-actions clearfix">
 			<input type="submit" value="Zurück" class="button button-prev" />
