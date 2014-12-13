@@ -44,6 +44,29 @@
 			content: '2 .grid.grid-50';
 		}
 	}
+
+	#article-properties-tobasket-form {
+		.form-item {
+			float: none;
+			margin: 0 0 5px 0;
+		}
+
+		.form-actions {
+			& {
+				float: none;
+			}
+
+			#{$button} {
+				width: 100%;
+				@include box-sizing(border-box);
+			}
+		}
+	}
+
+	#article-properties-tobasket-number {
+		width: 100%;
+		@include box-sizing(border-box);
+	}
 }
 
 /* width 768px
