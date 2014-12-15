@@ -67,6 +67,10 @@
 		width: 100%;
 		@include box-sizing(border-box);
 	}
+
+	.magnifier, .cursorshade, .statusdiv, .tracker {
+		display: none !important;
+	}
 }
 
 /* width 768px
@@ -219,6 +223,30 @@
 		#frontpage-faq .grid-inner {
 			padding: 0;
 		}
+	}
+}
+
+/* width 620px
+----------------------------------------------------------------------------------------*/
+@media only screen and (max-width: 620px) {
+	#article-properties {
+		& > .fluid-grid {
+			@include clear-column();
+		}
+
+		.equalheight-grid {
+			.grid-inner {
+				min-height: 0 !important;
+			}
+		}
+	}
+
+	#article-properties-data dl {
+		padding: 0;
+	}
+
+	#article-properties-tobasket {
+		position: relative;
 	}
 }
 
