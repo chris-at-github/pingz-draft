@@ -228,6 +228,11 @@
 	#article-properties-image-selection {
 		padding: 0 15px;
 	}
+
+	.ui-dialog {
+		max-width: 98%;
+		@include box-sizing(border-box);
+	}
 }
 
 /* width 620px
@@ -257,6 +262,10 @@
 /* width 520px
 ----------------------------------------------------------------------------------------*/
 @media only screen and (max-width: 520px) {
+	#{$h1} {
+		font-size: 25px;
+	}
+
 	.grid-break-smartphone, .fluid-grid {
 		@include clear-column();
 
