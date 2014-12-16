@@ -224,6 +224,10 @@
 			padding: 0;
 		}
 	}
+
+	#article-properties-image-selection {
+		padding: 0 15px;
+	}
 }
 
 /* width 620px
@@ -338,6 +342,10 @@
 		}
 	}
 
+	#body-sidebar {
+		margin: 25px -15px 0 -15px;
+	}
+
 	#breadcrumb {
 		#breadcrumb-title {
 			display: none;
@@ -357,6 +365,20 @@
 	.article-grid-outer {
 		padding: 0;
 		background: none;
+	}
+
+	#article-properties-image-selection {
+		& {
+			padding: 0;
+		}
+
+		ul {
+			text-align: center;
+		}
+
+		li {
+			display: inline-block;
+		}
 	}
 
 	#checkout-steps {
