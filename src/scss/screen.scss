@@ -1221,8 +1221,18 @@ dd.dd-margined {
 
 .article-grid {
 	.fluid-grid {
-		margin-left: -10px;
-		margin-right: -10px;
+		& {
+			margin-left: -10px;
+			margin-right: -10px;
+		}
+
+		&::before, &::after {
+			width: 1px;
+			height: 1px;
+			overflow: hidden;
+			font-size: 1px;
+			color: $grey-light;
+		}
 	}
 
 	.fluid-grid[data-columns]::before {
