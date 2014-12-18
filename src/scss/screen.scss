@@ -1389,8 +1389,10 @@ dd.dd-margined {
 
 /* article-properties
 ----------------------------------------------------------------------------------------*/
-#article-properties .fluid-grid:first-child {
-	padding: 0 0 35px 0;
+#article-properties {
+	.article-price-notify-description {
+		margin: 20px 0 0 0;
+	}
 }
 
 #article-properties-image {
@@ -1402,11 +1404,13 @@ dd.dd-margined {
 }
 
 #article-properties-data {
-	position: relative;
-}
+	& {
+		position: relative;
+	}
 
-#article-properties-data dl {
-	padding: 0 0 100px 0;
+	dl {
+		padding: 0 0 100px 0;
+	}
 }
 
 #article-properties-tobasket {
@@ -1468,6 +1472,10 @@ dd.dd-margined {
 }
 
 #article-properties-image-selection {
+	& {
+		padding: 0 15px;
+	}
+
 	li {
 		margin: 0 5px 0 0;
 		padding: 10px;
