@@ -229,6 +229,12 @@
 		max-width: 98%;
 		@include box-sizing(border-box);
 	}
+
+	#checkout-steps {
+		dfn {
+			@include hyphens();
+		}
+	}
 }
 
 /* width 620px
