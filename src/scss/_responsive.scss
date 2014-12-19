@@ -95,6 +95,10 @@
 	.magnifier, .cursorshade, .statusdiv, .tracker {
 		display: none !important;
 	}
+
+	#user-display-shippingaddress {
+		top: 0;
+	}
 }
 
 /* width 768px
@@ -282,6 +286,12 @@
 	}
 
 	.user-addresses-grid {
+		&.equalheight-grid {
+			.grid-inner {
+				min-height: 0 !important;
+			}
+		}
+
 		.grid-inner > .grid-60 {
 			width: auto;
 		}
