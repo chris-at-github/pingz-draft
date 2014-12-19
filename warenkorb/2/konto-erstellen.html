@@ -1,0 +1,386 @@
+<?php
+
+	$_T_CONFIG_LOCAL = array(
+		'script'			=> array(),
+		'css'					=> array(),
+		'widescreen'	=> true
+	);
+
+	$_T_WIDGET_LOCAL = array(
+		'steps'	=> '/widget/user-steps.html'
+	);
+
+?>
+<?php include($_SERVER['DOCUMENT_ROOT'] . '/tinytools/header.php'); ?>
+
+<form action="/warenkorb/2/konto-erstellen.html" name="order" method="post">
+
+						<div>
+				<input type="hidden" name="stoken" value="413AE93">
+<input type="hidden" name="lang" value="0">
+				<input type="hidden" name="actcontrol" value="user">
+
+				<input type="hidden" name="cl" value="user">
+				<input type="hidden" name="option" value="3">
+								<input type="hidden" name="fnc" value="createuser">
+								<input type="hidden" id="reloadAddress" name="reloadaddress" value="">
+				<input type="hidden" name="blshowshipaddress" value="1">
+			</div>
+
+
+	<div class="fluid-grid form-grid user-addresses-grid grid-break-tablet">
+		<div class="grid grid-100">
+			<div class="grid-inner">
+				<header class="h2">Kontoinformationen</header>
+
+				<div id="user-billingaddress-form" class="grid-60">
+
+	<div class="form-item">
+		<div class="form-label"><label for="user-account-username">E-Mail-Adresse <span class="form-required">*</span></label></div>
+		<div class="form-field">
+			<input id="userLoginName" type="text" name="lgn_usr" value="" data-required="true" data-type="email" class="parsley-validated">
+		</div>
+	</div>
+
+
+
+	<div class="form-item">
+		<div class="form-label"><label for="user-account-password">Passwort <span class="form-required">*</span></label></div>
+		<div class="form-field">
+			<input type="password" id="user-account-password" name="lgn_pwd" value="" data-required="true" data-minlength="6" data-minlength-message="Bitte ein längeres Passwort eingeben" data-equalto="#user-account-password-confirm" data-equalto-message="Fehler: Die Passwörter stimmen nicht überein." class="parsley-validated">
+		</div>
+	</div>
+
+
+
+	<div class="form-item">
+		<div class="form-label"><label for="user-account-password-confirm">Passwort <span class="form-required">*</span></label></div>
+		<div class="form-field">
+			<input type="password" id="user-account-password-confirm" name="lgn_pwd2" value="" data-required="true" data-minlength="6" data-minlength-message="Bitte ein längeres Passwort eingeben" class="parsley-validated">
+		</div>
+	</div>
+
+
+
+	<div class="form-item form-checkbox form-checkbox-inline clearfix">
+		<div class="clearfix">
+			<div class="form-field"><input id="user-account-newsletter" type="checkbox" name="blnewssubscribed" value="1"></div>
+			<div class="form-label"><label for="user-account-newsletter">Newsletter abonnieren</label></div>
+		</div>
+		<p class="text-small text-grey">Sie können den Newsletter jederzeit abbestellen.
+	</p></div>
+	<div><input type="hidden" name="blnewssubscribed" value="0"></div>				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="fluid-grid form-grid user-addresses-grid grid-break-tablet">
+		<div class="grid grid-50">
+			<div class="grid-inner">
+				<header class="h2">Rechnungsadresse</header>
+
+				<div id="user-billingaddress-form">
+
+
+
+
+<div class="form-item">
+	<div class="form-label"><label for="user-billingaddress-oxsal">Anrede:</label></div>
+	<div class="form-field">
+		<select name="invadr[oxuser__oxsal]" id="user-billingaddress-oxsal">
+	<option value="MR">Herr</option>
+	<option value="MRS">Frau</option>
+</select>	</div>
+</div>
+
+<div class="form-item">
+	<div class="form-label">
+		<label for="user-billingaddress-oxfname">
+			Vorname:
+			<span class="form-required">*</span>		</label>
+	</div>
+	<div class="form-field">
+		<input type="text" id="user-billingaddress-oxfname" name="invadr[oxuser__oxfname]" value="" data-required="true" class="parsley-validated">
+	</div>
+</div>
+
+<div class="form-item">
+	<div class="form-label">
+		<label for="user-billingaddress-oxlname">
+			Nachname:
+			<span class="form-required">*</span>		</label>
+	</div>
+	<div class="form-field">
+		<input type="text" id="user-billingaddress-oxlname" name="invadr[oxuser__oxlname]" value="" data-required="true" class="parsley-validated">
+	</div>
+</div>
+
+<div class="fluid-grid">
+	<div class="grid grid-66">
+		<div class="form-item grid-inner">
+			<div class="form-label">
+				<label for="user-billingaddress-oxstreet">
+					Straße:
+					<span class="form-required">*</span>				</label>
+			</div>
+			<div class="form-field">
+				<input type="text" id="user-billingaddress-oxstreet" name="invadr[oxuser__oxstreet]" value="" data-required="true" class="parsley-validated">
+			</div>
+		</div>
+	</div>
+
+	<div class="grid grid-33">
+		<div class="form-item grid-inner">
+			<div class="form-label">
+				<label for="user-billingaddress-oxstreetnr">
+					Hausnummer:
+					<span class="form-required">*</span>				</label>
+			</div>
+			<div class="form-field">
+				<input type="text" id="user-billingaddress-oxstreetnr" name="invadr[oxuser__oxstreetnr]" value="" data-required="true" class="parsley-validated">
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="fluid-grid">
+	<div class="grid grid-33">
+		<div class="form-item grid-inner">
+			<div class="form-label">
+				<label for="user-billingaddress-oxzip">
+					Postleitzahl:
+					<span class="form-required">*</span>				</label>
+			</div>
+			<div class="form-field">
+				<input type="text" id="user-billingaddress-oxzip" name="invadr[oxuser__oxzip]" value="" data-required="true" class="parsley-validated">
+			</div>
+		</div>
+	</div>
+
+	<div class="grid grid-66">
+		<div class="form-item grid-inner">
+			<div class="form-label">
+				<label for="user-billingaddress-oxcity">
+					Stadt:
+					<span class="form-required">*</span>				</label>
+			</div>
+			<div class="form-field">
+				<input type="text" id="user-billingaddress-oxcity" name="invadr[oxuser__oxcity]" value="" data-required="true" class="parsley-validated">
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="form-item">
+	<div class="form-label">
+
+		<label for="user-billingaddress-oxaddinfo">
+			zusätzliche Informationen (z.B. Stockwerk, Firma):
+					</label>
+	</div>
+	<div class="form-field">
+		<input type="text" id="user-billingaddress-oxaddinfo" name="invadr[oxuser__oxaddinfo]" value="">
+	</div>
+</div>
+
+
+
+
+
+
+
+	<div><input type="hidden" name="invadr[oxuser__oxcountryid]" value="a7c40f631fc920687.20179984"></div>
+
+
+
+
+<div class="form-item">
+	<div class="form-label">
+		<label for="user-billingaddress-oxfon">
+			Telefon (nur für Rückfragen):
+					</label>
+	</div>
+	<div class="form-field">
+		<input type="text" id="user-billingaddress-oxfon" name="invadr[oxuser__oxfon]" value="">
+	</div>
+</div>
+
+
+
+
+<p class="text-small">Bitte alle mit <span class="form-required">*</span> markierten Felder ausfüllen.</p>
+
+				</div>
+			</div>
+		</div>
+		<div class="grid grid-50">
+			<div class="grid-inner">
+				<div id="user-display-shippingaddress-form-item" class="form-item form-checkbox clearfix">
+					<div class="form-field"><input type="checkbox" name="blshowshipaddress" id="user-display-shippingaddress" checked="checked" value="0"></div>
+					<div class="form-label"><label for="user-display-shippingaddress">Rechnungsadresse als Lieferadresse verwenden</label></div>
+				</div>
+			</div>
+
+			<div id="user-shippingaddress-container" class="grid-inner hide">
+
+
+<header id="user-shippingaddress-header">
+	<div class="h2">Lieferadressen</div>
+	<div class="form-item">
+		<div class="form-label hide"><label for="user-shippingaddress-select">Lieferadresse wählen:</label></div>
+		<div class="form-field">
+			<select name="oxaddressid" id="user-shippingaddress-select">
+        <option value="-1">Neue Adresse</option>
+        			</select>
+		</div>
+	</div>
+</header>
+
+
+<div id="user-shippingaddress-form">
+
+	<div class="form-item">
+		<div class="form-label"><label for="user-shippingaddress-oxsal">Anrede:</label></div>
+		<div class="form-field">
+			<select name="deladr[oxaddress__oxsal]" id="user-shippingaddress-oxsal">
+	<option value="MR">Herr</option>
+	<option value="MRS">Frau</option>
+</select>		</div>
+	</div>
+
+	<div class="form-item">
+		<div class="form-label">
+			<label for="user-shippingaddress-oxfname">
+				Vorname:
+				<span class="form-required">*</span>			</label>
+		</div>
+		<div class="form-field">
+			<input type="text" id="user-shippingaddress-oxfname" name="deladr[oxaddress__oxfname]" value="" data-required="true" class="parsley-validated">
+		</div>
+	</div>
+
+	<div class="form-item">
+		<div class="form-label">
+			<label for="user-shippingaddress-oxlname">
+				Nachname:
+				<span class="form-required">*</span>			</label>
+		</div>
+		<div class="form-field">
+			<input type="text" id="user-shippingaddress-oxlname" name="deladr[oxaddress__oxlname]" value="" data-required="true" class="parsley-validated">
+		</div>
+	</div>
+
+
+
+	<div class="fluid-grid">
+		<div class="grid grid-66">
+			<div class="form-item grid-inner">
+				<div class="form-label">
+					<label for="user-shippingaddress-oxstreet">
+						Straße:
+						<span class="form-required">*</span>					</label>
+				</div>
+				<div class="form-field">
+					<input type="text" id="user-shippingaddress-oxstreet" name="deladr[oxaddress__oxstreet]" value="" data-required="true" class="parsley-validated">
+				</div>
+			</div>
+		</div>
+
+		<div class="grid grid-33">
+			<div class="form-item grid-inner">
+				<div class="form-label">
+					<label for="user-shippingaddress-oxstreetnr">
+						Hausnummer:
+						<span class="form-required">*</span>					</label>
+				</div>
+				<div class="form-field">
+					<input type="text" id="user-shippingaddress-oxstreetnr" name="deladr[oxaddress__oxstreetnr]" value="" data-required="true" class="parsley-validated">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="fluid-grid">
+		<div class="grid grid-33">
+			<div class="form-item grid-inner">
+				<div class="form-label">
+					<label for="user-shippingaddress-oxzip">
+						Postleitzahl:
+						<span class="form-required">*</span>					</label>
+				</div>
+				<div class="form-field">
+					<input type="text" id="user-shippingaddress-oxzip" name="deladr[oxaddress__oxzip]" value="" data-required="true" class="parsley-validated">
+				</div>
+			</div>
+		</div>
+
+		<div class="grid grid-66">
+			<div class="form-item grid-inner">
+				<div class="form-label">
+					<label for="user-shippingaddress-oxcity">
+						Stadt:
+						<span class="form-required">*</span>					</label>
+				</div>
+				<div class="form-field">
+					<input type="text" id="user-shippingaddress-oxcity" name="deladr[oxaddress__oxcity]" value="" data-required="true" class="parsley-validated">
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+		<div>
+			<input type="hidden" name="deladr[oxaddress__oxcountryid]" value="a7c40f631fc920687.20179984">
+		</div>
+
+
+
+
+	<div class="form-item">
+		<div class="form-label">
+
+			<label for="user-shippingaddress-oxaddinfo">
+				zusätzliche Informationen (z.B. Stockwerk, Firma):
+							</label>
+		</div>
+		<div class="form-field">
+			<input type="text" id="user-shippingaddress-oxaddinfo" name="deladr[oxaddress__oxaddinfo]" value="">
+		</div>
+	</div>
+
+	<div class="form-item">
+		<div class="form-label">
+			<label for="user-shippingaddress-oxfon">
+				Telefon (nur für Rückfragen):
+							</label>
+		</div>
+		<div class="form-field">
+			<input type="text" id="user-shippingaddress-oxfon" name="deladr[oxaddress__oxfon]" value="">
+		</div>
+	</div>
+
+
+	<p class="text-small">Bitte alle mit <span class="form-required">*</span> markierten Felder ausfüllen.</p>
+
+	</div>			</div>
+
+			<div class="grid-inner">
+				<div class="form-item">
+	<div class="form-label"><label for="user-checkout-remark">Ihre Mitteilung an uns</label></div>
+  <div class="form-field"><textarea id="user-checkout-remark" cols="60" rows="7" name="order_remark" placeholder="Hier können Sie uns noch etwas mitteilen."></textarea></div>
+</div>
+			</div>
+		</div>
+	</div>
+
+  <div class="form-actions checkout-form-actions clearfix">
+		<a href="http://localhost:8001/warenkorb/" class="button button-prev">Zurück</a>
+		<button class="button button-submit button-next button-large" name="userform" type="submit">Weiter zum nächsten Schritt</button>
+	</div>
+
+    </form>
+
+<?php include($_SERVER['DOCUMENT_ROOT'] . '/tinytools/footer.php'); ?>

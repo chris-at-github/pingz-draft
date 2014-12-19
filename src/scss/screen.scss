@@ -259,7 +259,7 @@ dd.dd-margined {
 }
 
 .grid-inner > .form-field > .parsley-error-container, .form-grid .parsley-error-container, .grid-inner > form .parsley-error-container {
-	left: inherit;
+	left: auto;
 	right: -195px;
 	max-width: 165px;
 	min-width: 165px;
