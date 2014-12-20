@@ -135,9 +135,11 @@
 
 		// -------------------------------------------------------------------------------------
 		// ResponsiveNav
-		var navigation = responsiveNav(".nav-collapse", {
-			label: '<span class="nav-toggle-icon"><span class="nav-toggle-icon-lines lines"></span></span>'
-		});
+		if($('.nav-collapse').length !== 0) {
+			var navigation = responsiveNav(".nav-collapse", {
+				label: '<span class="nav-toggle-icon"><span class="nav-toggle-icon-lines lines"></span></span>'
+			});
+		}
 
 		// -------------------------------------------------------------------------------------
 		// Lazy Load fuer Artikelbilder
