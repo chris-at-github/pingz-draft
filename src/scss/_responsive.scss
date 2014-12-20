@@ -96,8 +96,14 @@
 		display: none !important;
 	}
 
-	#user-display-shippingaddress {
-		top: 0;
+	#user-display-shippingaddress-form-item {
+		.form-label {
+			margin: 0 0 0 20px;
+		}
+
+		#user-display-shippingaddress {
+			top: -1px;
+		}
 	}
 }
 
