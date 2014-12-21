@@ -411,6 +411,16 @@
 		}
 	}
 
+	#footer-sitemap {
+		& > ul > li {
+			margin: 0 0 25px 0;
+		}
+
+		li a {
+			margin: 8px 0;
+		}
+	}
+
 	#basket {
 		& {
 			top: 5px; right: 55px;
