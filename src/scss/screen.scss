@@ -1531,6 +1531,35 @@ dd.dd-margined {
 	color: $pink;
 }
 
+/*
+-*/
+.article-brand {
+	& {
+		margin: 50px 0 0 0;
+	}
+
+	.logo {
+		width: 37px;
+		float: left;
+	}
+
+	.description {
+		& {
+			margin: 0 0 0 53px;
+		}
+
+		a {
+			font-weight: bold;
+			color: $grey-dark;
+		}
+
+		a:hover, a:focus {
+			color: $pink;
+			text-decoration: none;
+		}
+	}
+}
+
 /* article-filter
 ----------------------------------------------------------------------------------------*/
 #article-filter {
