@@ -1,0 +1,88 @@
+#teaser .zigzag-charlie {
+	& {
+		border-bottom: 3px solid $grey;
+		background: $white url(../../img/teaser-zigzag-charlie.jpg) no-repeat 0 bottom;
+		font-family: $candara;
+		font-size: 18px;
+		color: $grey-darker;
+		text-align: left;
+		line-height: 1.4;
+	}
+
+	.teaser-inner {
+		top: 30px; bottom: auto;
+		right: auto; left: 560px;
+	}
+
+	#{$h1} {
+		letter-spacing: 4px;
+		color: $pink;
+	}
+
+	.teaser-call-to-action {
+		bottom: 35px; left: 560px;
+	}
+}
+
+@media only screen and (max-width: 890px) {
+	#teaser .zigzag-charlie {
+		& {
+			padding: 0 0 20px 510px;
+		}
+
+		.teaser-inner {
+			position: static;
+			margin: 0 0 20px 0;
+		}
+
+		.teaser-call-to-action {
+			position: static;
+		}
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	#teaser .zigzag-charlie {
+		& {
+			min-height: 0;
+			background-size: 300px auto;
+			padding: 0 0 20px 340px;
+			@include box-sizing(border-box);
+		}
+
+		.teaser-inner {
+			padding: 0;
+		}
+
+		.teaser-call-to-action a {
+			display: inline-block;
+		}
+	}
+}
+
+@media only screen and (max-width: 620px) {
+	#teaser .zigzag-charlie {
+		& {
+			background-size: 250px auto;
+			padding: 0 0 20px 260px;
+		}
+	}
+}
+
+@media only screen and (max-width: 520px) {
+	#teaser .zigzag-charlie {
+		& {
+			background-position: 0 0;
+			background-size: contain;
+			padding: 60% 0 20px 20px;
+		}
+
+		.teaser-inner {
+			text-align: center;
+		}
+
+		.teaser-call-to-action {
+			text-align: center;
+		}
+	}
+}
